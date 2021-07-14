@@ -6,7 +6,7 @@ namespace RanbowBack.Config
 	{
 		#region Singleton
 		private static Configuration _instance;
-		private static object padlock = new object();
+		private static readonly object padlock = new();
 		public static Configuration Instance
 		{
 			get

@@ -1,9 +1,8 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Data.SqlClient;
 
 using RanbowBack.Config;
+using RanbowBack.Repositories.Base;
 
 namespace Ranbow
 {
@@ -11,7 +10,9 @@ namespace Ranbow
 	{
 		public static void Main(string[] args)
 		{
-			if (ValidateConnection(Configuration.Instance.Init().ConnectionString))
+			BaseRepository repo = new(Configuration.Instance.Init().ConnectionString);
+			if (repo.Check())
+				repo.Dispose();
 				CreateHostBuilder(args).Build().Run();
 		}
 
@@ -21,26 +22,5 @@ namespace Ranbow
 				{
 					webBuilder.UseStartup<Startup>();
 				});
-
-		private static bool ValidateConnection(string connectionString)
-		{
-			SqlConnection connection = new SqlConnection(connectionString);
-			try
-			{
-				connection.Open();
-				connection.Close();
-			}
-			catch(Exception e)
-			{
-				Console.Error.WriteLine("Error validating connection string\n" + e.Message);
-				return false;
-			}
-			finally
-			{
-				if (connection.State == System.Data.ConnectionState.Open)
-					connection.Close();
-			}
-			return true;
-		}
 	}
 }
