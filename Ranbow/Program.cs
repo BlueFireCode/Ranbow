@@ -12,8 +12,10 @@ namespace Ranbow
 		{
 			BaseRepository repo = new(Configuration.Instance.Init().ConnectionString);
 			if (repo.Check())
+			{
 				repo.Dispose();
 				CreateHostBuilder(args).Build().Run();
+			}
 		}
 
 		public static IHostBuilder CreateHostBuilder(string[] args) =>

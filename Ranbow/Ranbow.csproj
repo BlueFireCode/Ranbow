@@ -23,5 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RanbowBack\RanbowBack.csproj" />
+    <ProjectReference Include="..\Ranbowmizer\Ranbowmizer.csproj" />
   </ItemGroup>
 </Project>

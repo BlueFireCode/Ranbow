@@ -1,6 +1,7 @@
-﻿using RanbowBack.Enums;
+﻿using System.Collections.Generic;
+
+using RanbowBack.Enums;
 using RanbowBack.Models.Base;
-using System.Collections.Generic;
 
 namespace RanbowBack.Models
 {

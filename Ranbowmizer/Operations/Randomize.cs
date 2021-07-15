@@ -1,8 +1,9 @@
-﻿using RanbowBack.Enums;
-using RanbowBack.Models;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
+using System.Collections.Generic;
+
+using RanbowBack.Enums;
+using RanbowBack.Models;
 
 namespace Ranbowmizer.Operations
 {
@@ -55,9 +56,9 @@ namespace Ranbowmizer.Operations
 				Name = wep.Name
 			};
 
-			ret.Sights = new List<Sights> { wep.Sights[random.Next(0, wep.Sights.Count)] };
-			ret.Barrels = new List<Barrels> { wep.Barrels[random.Next(0, wep.Barrels.Count)] };
-			ret.Grips = new List<Grips> { wep.Grips[random.Next(0, wep.Grips.Count)] };
+			ret.Sights = wep.Sights.Count > 0 ? new List<Sights> { wep.Sights[random.Next(0, wep.Sights.Count)] }: null;
+			ret.Barrels = wep.Barrels.Count > 0 ? new List<Barrels> { wep.Barrels[random.Next(0, wep.Barrels.Count)] } : null;
+			ret.Grips = wep.Grips.Count > 0 ? new List<Grips> { wep.Grips[random.Next(0, wep.Grips.Count)] } : null;
 			ret.Laser = wep.Laser && (random.Next(0, 2) != 0);
 
 			return ret;

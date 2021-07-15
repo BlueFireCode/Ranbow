@@ -1,14 +1,14 @@
-﻿using RanbowBack.Enums;
-using RanbowBack.DbObjects.Base;
-using System.Collections.Generic;
+﻿using RanbowBack.DbObjects.Base;
 
 namespace RanbowBack.DbObjects
 {
 	internal class DbWeapon : DbObject
 	{
-		public string Sights { get; set; }
-		public string Barrels { get; set; }
-		public string Grips { get; set; }
+#nullable enable
+		public string? Sights { get; set; } 
+		public string? Barrels { get; set; }
+		public string? Grips { get; set; }
+#nullable disable
 		public bool Laser { get; set; }
 	}
 }

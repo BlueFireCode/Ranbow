@@ -1,11 +1,13 @@
-﻿using MySql.Data.MySqlClient;
-using RanbowBack.Config;
-using RanbowBack.DbObjects;
-using RanbowBack.Models;
-using RanbowBack.Repositories.Base;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Diagnostics;
+using System.Collections.Generic;
+
+using MySql.Data.MySqlClient;
+
+using RanbowBack.Config;
+using RanbowBack.Models;
+using RanbowBack.DbObjects;
+using RanbowBack.Repositories.Base;
 
 namespace RanbowBack.Repositories
 {
@@ -20,7 +22,7 @@ namespace RanbowBack.Repositories
 
 			try
 			{
-				DbCommand.CommandText = "SELECT * FROM Operators;";
+				DbCommand.CommandText = "SELECT * FROM Operator;";
 				DbCommand.Parameters.Clear();
 				DbConnection.Open();
 				using (MySqlDataReader reader = DbCommand.ExecuteReader())
@@ -32,14 +34,16 @@ namespace RanbowBack.Repositories
 							ID = (int)reader["ID"],
 							Name = (string)reader["Name"],
 							Primary1 = (int)reader["Primary1"],
-							Primary2 = (int)reader["Primary2"],
-							Primary3 = (int)reader["Primary3"],
+							Primary2 = Convert.IsDBNull(reader["Primary2"]) ? null : (int?)reader["Primary2"],
+							Primary3 = Convert.IsDBNull(reader["Primary3"]) ? null : (int?)reader["Primary3"],
 							Secondary1 = (int)reader["Secondary1"],
-							Secondary2 = (int)reader["Secondary2"],
-							Secondary3 = (int)reader["Secondary3"],
+							Secondary2 = Convert.IsDBNull(reader["Secondary2"]) ? null : (int?)reader["Secondary2"],
+							Secondary3 = Convert.IsDBNull(reader["Secondary3"]) ? null : (int?)reader["Secondary3"],
 							Gadget1 = (int)reader["Gadget1"],
 							Gadget2 = (int)reader["Gadget2"],
-							Description = (string)reader["Description"]
+#nullable enable
+							Description = Convert.IsDBNull(reader["Description"]) ? null : (string?)reader["Description"]
+#nullable disable
 						});
 					}
 				}

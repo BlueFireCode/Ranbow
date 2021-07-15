@@ -12,6 +12,8 @@ namespace RanbowBack.Models
 		public WeaponModel Secondary3 { get; set; }
 		public GadgetModel Gadget1 { get; set; }
 		public GadgetModel Gadget2 { get; set; }
-		public string Description { get; set; }
+#nullable enable
+		public string? Description { get; set; }
+#nullable disable
 	}
 }

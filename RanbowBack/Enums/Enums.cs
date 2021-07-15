@@ -5,7 +5,7 @@
 		Iron_Sights = 0,
 		Holographic = 1,
 		Red_Dot = 2,
-		Reflext = 3,
+		Reflex = 3,
 		Scope_1point5x = 4,
 		Scope_2point0x = 5,
 		Scope_2point5x = 6,
