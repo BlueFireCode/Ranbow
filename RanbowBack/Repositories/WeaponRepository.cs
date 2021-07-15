@@ -9,7 +9,7 @@ using System.Diagnostics;
 
 namespace RanbowBack.Repositories
 {
-	class WeaponRepository : BaseRepository
+	public class WeaponRepository : BaseRepository
 	{
 		public WeaponRepository(string connectionString) : base(connectionString){ }
 
@@ -59,16 +59,19 @@ namespace RanbowBack.Repositories
 				var sightArr = dbitem.Sights.Split(';');
 				foreach (var item in sightArr)
 					sights.Add((Sights)int.Parse(item));
+				sights.Add(Sights.Iron_Sights);
 
 				List<Barrels> barrels = new();
 				var barrelArr = dbitem.Barrels.Split(';');
 				foreach (var item in barrelArr)
 					barrels.Add((Barrels)int.Parse(item));
+				barrels.Add(Barrels.Blank);
 
 				List<Grips> grips = new();
 				var gripArr = dbitem.Grips.Split(';');
 				foreach (var item in gripArr)
 					grips.Add((Grips)int.Parse(item));
+				grips.Add(Grips.Blank);
 
 				entity = new()
 				{

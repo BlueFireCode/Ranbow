@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace RanbowBack.Repositories
 {
-	class GadgetRepository : BaseRepository
+	public class GadgetRepository : BaseRepository
 	{
 		public GadgetRepository(string connectionString) : base(connectionString) { }
 

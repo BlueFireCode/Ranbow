@@ -2,7 +2,7 @@
 
 namespace RanbowBack.Models
 {
-	class OperatorModel : BaseModel
+	public class OperatorModel : BaseModel
 	{
 		public WeaponModel Primary1 { get; set; }
 		public WeaponModel Primary2 { get; set; }

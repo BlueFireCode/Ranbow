@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace RanbowBack.DbObjects
 {
-	class DbWeapon : DbObject
+	internal class DbWeapon : DbObject
 	{
 		public string Sights { get; set; }
 		public string Barrels { get; set; }

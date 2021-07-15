@@ -2,7 +2,7 @@
 
 namespace RanbowBack.DbObjects
 {
-	class DbOperator : DbObject
+	internal class DbOperator : DbObject
 	{
 		public int Primary1 { get; set; }
 		public int Primary2 { get; set; }

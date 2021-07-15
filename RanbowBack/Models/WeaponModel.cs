@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace RanbowBack.Models
 {
-	class WeaponModel : BaseModel
+	public class WeaponModel : BaseModel
 	{
 		public List<Sights> Sights { get; set; }
 		public List<Barrels> Barrels { get; set; }

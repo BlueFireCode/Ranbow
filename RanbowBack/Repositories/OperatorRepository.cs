@@ -9,7 +9,7 @@ using System.Diagnostics;
 
 namespace RanbowBack.Repositories
 {
-	class OperatorRepository : BaseRepository
+	public class OperatorRepository : BaseRepository
 	{
 		public OperatorRepository(string connectionString) : base(connectionString){ }
 

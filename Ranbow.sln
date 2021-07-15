@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranbow", "Ranbow\Ranbow.csproj", "{683A390F-B14B-4E47-A6F8-F3FCFD419224}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RanbowBack", "RanbowBack\RanbowBack.csproj", "{A3672B96-1559-4DAE-80A7-D370BC0C517F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RanbowBack", "RanbowBack\RanbowBack.csproj", "{A3672B96-1559-4DAE-80A7-D370BC0C517F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ranbowmizer", "Ranbowmizer\Ranbowmizer.csproj", "{79C7F7B0-0D45-4601-BB87-9D3C5463D6E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A3672B96-1559-4DAE-80A7-D370BC0C517F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3672B96-1559-4DAE-80A7-D370BC0C517F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3672B96-1559-4DAE-80A7-D370BC0C517F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79C7F7B0-0D45-4601-BB87-9D3C5463D6E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79C7F7B0-0D45-4601-BB87-9D3C5463D6E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79C7F7B0-0D45-4601-BB87-9D3C5463D6E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79C7F7B0-0D45-4601-BB87-9D3C5463D6E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
