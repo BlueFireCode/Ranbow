@@ -8,6 +8,7 @@ using RanbowBack.Config;
 using RanbowBack.Models;
 using RanbowBack.DbObjects;
 using RanbowBack.Repositories.Base;
+using RanbowBack.Enums;
 
 namespace RanbowBack.Repositories
 {
@@ -15,9 +16,15 @@ namespace RanbowBack.Repositories
 	{
 		public OperatorRepository(string connectionString) : base(connectionString){ }
 
-		public bool GetAll(out List<OperatorModel> list)
+        public List<OperatorModel> Operators
 		{
-			bool result = false;
+			get => _operators is null ? GetAll() : _operators;
+		}
+
+		private List<OperatorModel> _operators;
+
+        public List<OperatorModel> GetAll()
+		{
 			List<DbOperator> dbObjectList = new();
 
 			try
@@ -42,14 +49,13 @@ namespace RanbowBack.Repositories
 							Gadget1 = (int)reader["Gadget1"],
 							Gadget2 = (int)reader["Gadget2"],
 #nullable enable
-							Description = Convert.IsDBNull(reader["Description"]) ? null : (string?)reader["Description"]
+							Description = Convert.IsDBNull(reader["Description"]) ? null : (string?)reader["Description"],
 #nullable disable
+							Attacker = (ulong)reader["Attacker"] != 0
 						});
 					}
 				}
 				DbConnection.Close();
-
-				result = true;
 			}
 			catch (Exception e)
 			{
@@ -64,16 +70,18 @@ namespace RanbowBack.Repositories
 				}
 			}
 
-			if (result && dbObjectList.Count != 0)
+			List<OperatorModel> list = new();
+
+			if (dbObjectList.Count != 0)
 			{
-				list = new();
 				foreach (var item in dbObjectList)
 				{
 					OperatorModel model = new()
 					{
 						ID = item.ID,
 						Name = item.Name,
-						Description = item.Description
+						Description = item.Description,
+						Side = item.Attacker ? Side.Attack : Side.Defense
 					};
 					WeaponRepository weaponRepo = new(Configuration.Instance.Config.ConnectionString);
 
@@ -134,11 +142,11 @@ namespace RanbowBack.Repositories
 
 					list.Add(model);
 				}
-				return result;
+				_operators = list;
+				return list;
 			}
 			list = null;
-
-			return false;
+			return list;
 		}
 	}
 }

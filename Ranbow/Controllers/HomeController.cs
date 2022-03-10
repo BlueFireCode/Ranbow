@@ -1,10 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Ranbow.ViewModels;
+using RanbowBack.Config;
+using RanbowBack.Models;
+using RanbowBack.Repositories;
+using Ranbowmizer.Operators;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace Ranbow.Controllers
 {
-	public class HomeController : Controller
+    public class HomeController : Controller
 	{
 		public HomeController()
 		{

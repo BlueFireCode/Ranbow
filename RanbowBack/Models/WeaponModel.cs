@@ -11,5 +11,5 @@ namespace RanbowBack.Models
 		public List<Barrels> Barrels { get; set; }
 		public List<Grips> Grips { get; set; }
 		public bool Laser { get; set; }
-	}
+    }
 }

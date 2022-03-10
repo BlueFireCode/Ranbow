@@ -28,4 +28,10 @@
 		Vertical_Grip = 1,
 		Horizontal_Grip = 2
 	}
+
+	public enum Side
+    {
+		Defense = 0,
+		Attack = 1
+    }
 }

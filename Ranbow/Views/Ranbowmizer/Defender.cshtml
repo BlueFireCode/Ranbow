@@ -1,0 +1,43 @@
+﻿@{
+	ViewData["Title"] = "Defender";
+}
+<h1>@ViewData["Title"]</h1>
+
+<input type="button" value="Attacker" onclick="location.href='@Url.Action("Attacker", "Ranbowmizer")'"/>
+<input type="button" value="Defender" onclick="location.href='@Url.Action("Defender", "Ranbowmizer")'"/>
+
+<p>Random Operator: @ViewBag.Random</p>
+<p>Selected Primary: @ViewBag.Random.Primary1</p>
+<ul>
+	@if (ViewBag.Random.Primary1.Sights is not null)
+	{
+		<li>Selected Sight/Scope: @ViewBag.Random.Primary1.Sights[0]</li>
+	}
+	@if (ViewBag.Random.Primary1.Barrels is not null)
+	{
+		<li>Selected Barrel: @ViewBag.Random.Primary1.Barrels[0]</li>
+	}
+	@if (ViewBag.Random.Primary1.Grips is not null)
+	{
+		<li>Selected Grip: @ViewBag.Random.Primary1.Grips[0]</li>
+	}
+	<li>Laser: @ViewBag.Random.Primary1.Laser</li>
+</ul>
+<p>Selected Secondary: @ViewBag.Random.Secondary1</p>
+<ul>
+	@if (ViewBag.Random.Secondary1.Sights is not null)
+	{
+		<li>Selected Sight/Scope: @ViewBag.Random.Secondary1.Sights[0]</li>
+	}
+	@if (ViewBag.Random.Secondary1.Barrels is not null)
+	{
+		<li>Selected Barrel: @ViewBag.Random.Secondary1.Barrels[0]</li>
+	}
+	@if (ViewBag.Random.Secondary1.Grips is not null)
+	{
+		<li>Selected Grip: @ViewBag.Random.Secondary1.Grips[0]</li>
+	}
+	<li>Laser: @ViewBag.Random.Secondary1.Laser</li>
+</ul>
+<p>Selected Gadget: @ViewBag.Random.Gadget1</p>
+<p>Description: @ViewBag.Description</p>

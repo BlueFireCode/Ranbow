@@ -1,0 +1,42 @@
+﻿@{
+	ViewData["Title"] = "Ranbow";
+}
+<h1>@ViewData["Title"]</h1>
+
+<input type="button" value="Attacker" onclick="location.href='@Url.Action("Attacker", "Ranbowmizer")'"/>
+<input type="button" value="Defender" onclick="location.href='@Url.Action("Defender", "Ranbowmizer")'"/>
+
+<table>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Primary 1</th>
+		<th>Primary 2</th>
+		<th>Primary 3</th>
+		<th>Secondary 1</th>
+		<th>Secondary 2</th>
+		<th>Secondary 3</th>
+		<th>Gadget 1</th>
+		<th>Gadget 2</th>
+		<th>Description</th>
+		<th>Side</th>
+	</tr>
+	@foreach (var op in ViewBag.Operators)
+   {
+	   <tr>
+		   <td>@op.ID</td>
+		   <td>@op.Name</td>
+		   <td>@op.Primary1</td>
+		   <td>@op.Primary2</td>
+		   <td>@op.Primary3</td>
+		   <td>@op.Secondary1</td>
+		   <td>@op.Secondary2</td>
+		   <td>@op.Secondary3</td>
+		   <td>@op.Gadget1</td>
+		   <td>@op.Gadget2</td>
+		   <td>@op.Description</td>
+		   <td>@op.Side</td>
+	   </tr>
+   }
+</table>
+ 

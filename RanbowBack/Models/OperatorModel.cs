@@ -1,4 +1,5 @@
-﻿using RanbowBack.Models.Base;
+﻿using RanbowBack.Enums;
+using RanbowBack.Models.Base;
 
 namespace RanbowBack.Models
 {
@@ -14,6 +15,7 @@ namespace RanbowBack.Models
 		public GadgetModel Gadget2 { get; set; }
 #nullable enable
 		public string? Description { get; set; }
+        public Side Side { get; set; }
 #nullable disable
-	}
+    }
 }

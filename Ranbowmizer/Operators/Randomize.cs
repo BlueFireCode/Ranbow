@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using RanbowBack.Enums;
 using RanbowBack.Models;
 
-namespace Ranbowmizer.Operations
+namespace Ranbowmizer.Operators
 {
 	public class Randomize
 	{
