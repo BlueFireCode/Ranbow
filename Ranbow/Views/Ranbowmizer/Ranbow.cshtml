@@ -3,74 +3,175 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<input type="button" value="Attacker" onclick="location.href='@Url.Action("Attacker", "Ranbowmizer")'" />
-<input type="button" value="Defender" onclick="location.href='@Url.Action("Defender", "Ranbowmizer")'" />
+<input type="button" value="Attack" onclick="location.href='@Url.Action("Attacker", "Ranbowmizer")'" class="randomize-btn-image-atk"/>
+<input type="button" value="Defense" onclick="location.href='@Url.Action("Defender", "Ranbowmizer")'" class="randomize-btn-image-def"/>
 
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Primary 1</th>
-        <th>Primary 2</th>
-        <th>Primary 3</th>
-        <th>Secondary 1</th>
-        <th>Secondary 2</th>
-        <th>Secondary 3</th>
-        <th>Gadget 1</th>
-        <th>Gadget 2</th>
-        <th>Description</th>
-        <th>Side</th>
-    </tr>
-    @foreach (var op in ViewBag.Operators)
-    {
+<button type="button" class="collapsible">Open Attackers</button>
+<div class="content">
+    <table>
         <tr>
-            <td>@op.ID</td>
-            <td>@op.Name</td>
-            <td>@op.Primary1</td>
-            @if (op.Primary2 is null)
-            {
-                <td>-</td>
-            }
-            else
-            {
-                <td>@op.Primary2</td>
-            }
-            @if (op.Primary2 is null)
-            {
-                <td>-</td>
-            }
-            else
-            {
-                <td>@op.Primary3</td>
-            }
-            <td>@op.Secondary1</td>
-            @if (op.Secondary2 is null)
-            {
-                <td>-</td>
-            }
-            else
-            {
-                <td>@op.Secondary2</td>
-            }
-            @if (op.Secondary3 is null)
-            {
-                <td>-</td>
-            }
-            else
-            {
-                <td>@op.Secondary3</td>
-            }
-            <td>@op.Gadget1</td>
-            <td>@op.Gadget2</td>
-            @if (op.Description is null)
-            {
-                <td>-</td>
-            }
-            else
-            {
-                <td>@op.Description</td>
-            }
-            <td>@op.Side</td>
+            <th>Select</th>
+            @*<th>Id</th>*@
+            <th>Name</th>
+            <th>Primary 1</th>
+            <th>Primary 2</th>
+            <th>Primary 3</th>
+            <th>Secondary 1</th>
+            <th>Secondary 2</th>
+            <th>Secondary 3</th>
+            <th>Gadget 1</th>
+            <th>Gadget 2</th>
+            <th>Description</th>
+            <th>Side</th>
         </tr>
+        @{
+            IEnumerable<RanbowBack.Models.OperatorModel> atks = ViewBag.Operators;
+        }
+        @foreach (var op in atks.Where(x => x.Side == RanbowBack.Enums.Side.Attack))
+        {
+            <tr>
+                <td><input type="checkbox" name="@op.ID" checked />&nbsp;</td>
+                @*<td>@op.ID</td>*@
+                <td>@op.Name</td>
+                <td>@op.Primary1</td>
+                @if (op.Primary2 is null)
+                {
+                    <td>-</td>
+                }
+                else
+                {
+                    <td>@op.Primary2</td>
+                }
+                @if (op.Primary2 is null)
+                {
+                    <td>-</td>
+                }
+                else
+                {
+                    <td>@op.Primary3</td>
+                }
+                <td>@op.Secondary1</td>
+                @if (op.Secondary2 is null)
+                {
+                    <td>-</td>
+                }
+                else
+                {
+                    <td>@op.Secondary2</td>
+                }
+                @if (op.Secondary3 is null)
+                {
+                    <td>-</td>
+                }
+                else
+                {
+                    <td>@op.Secondary3</td>
+                }
+                <td>@op.Gadget1</td>
+                <td>@op.Gadget2</td>
+                @if (op.Description is null)
+                {
+                    <td>-</td>
+                }
+                else
+                {
+                    <td>@op.Description</td>
+                }
+                <td>@op.Side</td>
+            </tr>
+        }
+    </table>
+</div>
+<button type="button" class="collapsible">Open Defenders</button>
+<div class="content">
+    <table>
+        <tr>
+            <th>Select</th>
+            @*<th>Id</th>*@
+            <th>Name</th>
+            <th>Primary 1</th>
+            <th>Primary 2</th>
+            <th>Primary 3</th>
+            <th>Secondary 1</th>
+            <th>Secondary 2</th>
+            <th>Secondary 3</th>
+            <th>Gadget 1</th>
+            <th>Gadget 2</th>
+            <th>Description</th>
+            <th>Side</th>
+        </tr>
+        @{
+            IEnumerable<RanbowBack.Models.OperatorModel> defs = ViewBag.Operators;
+        }
+        @foreach (var op in defs.Where(x => x.Side == RanbowBack.Enums.Side.Defense))
+        {
+            <tr>
+                <td><input type="checkbox" name="@op.ID" checked />&nbsp;</td>
+                @*<td>@op.ID</td>*@
+                <td>@op.Name</td>
+                <td>@op.Primary1</td>
+                @if (op.Primary2 is null)
+                {
+                    <td>-</td>
+                }
+                else
+                {
+                    <td>@op.Primary2</td>
+                }
+                @if (op.Primary2 is null)
+                {
+                    <td>-</td>
+                }
+                else
+                {
+                    <td>@op.Primary3</td>
+                }
+                <td>@op.Secondary1</td>
+                @if (op.Secondary2 is null)
+                {
+                    <td>-</td>
+                }
+                else
+                {
+                    <td>@op.Secondary2</td>
+                }
+                @if (op.Secondary3 is null)
+                {
+                    <td>-</td>
+                }
+                else
+                {
+                    <td>@op.Secondary3</td>
+                }
+                <td>@op.Gadget1</td>
+                <td>@op.Gadget2</td>
+                @if (op.Description is null)
+                {
+                    <td>-</td>
+                }
+                else
+                {
+                    <td>@op.Description</td>
+                }
+                <td>@op.Side</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
     }
-</table>
+  });
+}
+</script>

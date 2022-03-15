@@ -3,8 +3,8 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<input type="button" value="Attacker" onclick="location.href='@Url.Action("Attacker", "Ranbowmizer")'" />
-<input type="button" value="Defender" onclick="location.href='@Url.Action("Defender", "Ranbowmizer")'" />
+<input type="button" value="Attack" onclick="location.href='@Url.Action("Attacker", "Ranbowmizer")'" class="randomize-btn-image-atk"/>
+<input type="button" value="Defense" onclick="location.href='@Url.Action("Defender", "Ranbowmizer")'" class="randomize-btn-image-def"/>
 
 <p>Random Operator: @ViewBag.Random</p>
 <p>Selected Primary: @ViewBag.Random.Primary1</p>
