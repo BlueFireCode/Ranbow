@@ -2,7 +2,7 @@
 
 namespace RanbowBack.Models
 {
-	public class GadgetModel : BaseModel
-	{
-	}
+    public class GadgetModel : BaseModel
+    {
+    }
 }

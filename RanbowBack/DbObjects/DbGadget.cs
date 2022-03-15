@@ -2,7 +2,7 @@
 
 namespace RanbowBack.DbObjects
 {
-	internal class DbGadget : DbObject
-	{
-	}
+    internal class DbGadget : DbObject
+    {
+    }
 }

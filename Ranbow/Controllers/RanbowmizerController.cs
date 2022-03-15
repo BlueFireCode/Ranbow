@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Ranbow.ViewModels;
-using RanbowBack.Config;
 using RanbowBack.Enums;
 using RanbowBack.Repositories;
 using Ranbowmizer.Operators;
