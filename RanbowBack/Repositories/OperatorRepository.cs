@@ -1,152 +1,101 @@
-﻿using System;
-using System.Diagnostics;
-using System.Collections.Generic;
-
-using MySql.Data.MySqlClient;
-
+﻿using MySql.Data.MySqlClient;
 using RanbowBack.Config;
-using RanbowBack.Models;
 using RanbowBack.DbObjects;
-using RanbowBack.Repositories.Base;
 using RanbowBack.Enums;
+using RanbowBack.Models;
+using RanbowBack.Repositories.Base;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace RanbowBack.Repositories
 {
-	public class OperatorRepository : BaseRepository
-	{
-		public OperatorRepository(string connectionString) : base(connectionString){ }
+    public class OperatorRepository : BaseRepository
+    {
+        public OperatorRepository(string connectionString) : base(connectionString) { }
 
-        public List<OperatorModel> Operators
-		{
-			get => _operators is null ? GetAll() : _operators;
-		}
+        public static List<OperatorModel> Operators
+        {
+            get => _operators.Count < 1 ? new OperatorRepository(Configuration.Instance.Config.ConnectionString).GetAll() : _operators;
+        }
 
-		private List<OperatorModel> _operators;
+        private static List<OperatorModel> _operators = new();
 
         public List<OperatorModel> GetAll()
-		{
-			List<DbOperator> dbObjectList = new();
+        {
+            List<DbOperator> dbObjectList = new();
 
-			try
-			{
-				DbCommand.CommandText = "SELECT * FROM Operator;";
-				DbCommand.Parameters.Clear();
-				DbConnection.Open();
-				using (MySqlDataReader reader = DbCommand.ExecuteReader())
-				{
-					while (reader.Read())
-					{
-						dbObjectList.Add(new()
-						{
-							ID = (int)reader["ID"],
-							Name = (string)reader["Name"],
-							Primary1 = (int)reader["Primary1"],
-							Primary2 = Convert.IsDBNull(reader["Primary2"]) ? null : (int?)reader["Primary2"],
-							Primary3 = Convert.IsDBNull(reader["Primary3"]) ? null : (int?)reader["Primary3"],
-							Secondary1 = (int)reader["Secondary1"],
-							Secondary2 = Convert.IsDBNull(reader["Secondary2"]) ? null : (int?)reader["Secondary2"],
-							Secondary3 = Convert.IsDBNull(reader["Secondary3"]) ? null : (int?)reader["Secondary3"],
-							Gadget1 = (int)reader["Gadget1"],
-							Gadget2 = (int)reader["Gadget2"],
+            try
+            {
+                DbCommand.CommandText = "SELECT * FROM Operator;";
+                DbCommand.Parameters.Clear();
+                DbConnection.Open();
+                using (MySqlDataReader reader = DbCommand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        dbObjectList.Add(new()
+                        {
+                            ID = (int)reader["ID"],
+                            Name = (string)reader["Name"],
+                            Primary1 = (int)reader["Primary1"],
+                            Primary2 = Convert.IsDBNull(reader["Primary2"]) ? null : (int?)reader["Primary2"],
+                            Primary3 = Convert.IsDBNull(reader["Primary3"]) ? null : (int?)reader["Primary3"],
+                            Secondary1 = (int)reader["Secondary1"],
+                            Secondary2 = Convert.IsDBNull(reader["Secondary2"]) ? null : (int?)reader["Secondary2"],
+                            Secondary3 = Convert.IsDBNull(reader["Secondary3"]) ? null : (int?)reader["Secondary3"],
+                            Gadget1 = (int)reader["Gadget1"],
+                            Gadget2 = (int)reader["Gadget2"],
 #nullable enable
-							Description = Convert.IsDBNull(reader["Description"]) ? null : (string?)reader["Description"],
+                            Description = Convert.IsDBNull(reader["Description"]) ? null : (string?)reader["Description"],
 #nullable disable
-							Attacker = (ulong)reader["Attacker"] != 0
-						});
-					}
-				}
-				DbConnection.Close();
-			}
-			catch (Exception e)
-			{
-				//TODO: Add logging
-				Debug.WriteLine(e.Message);
-			}
-			finally
-			{
-				if (DbConnection.State == System.Data.ConnectionState.Open)
-				{
-					DbConnection.Close();
-				}
-			}
+                            Attacker = (ulong)reader["Attacker"] != 0
+                        });
+                    }
+                }
+                DbConnection.Close();
+            }
+            catch (Exception e)
+            {
+                //TODO: Add logging
+                Debug.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (DbConnection.State == System.Data.ConnectionState.Open)
+                {
+                    DbConnection.Close();
+                }
+            }
 
-			List<OperatorModel> list = new();
+            if (dbObjectList.Count != 0)
+            {
+                var weapons = WeaponRepository.Weapons;
+                var gadgets = GadgetRepository.Gadgets;
+                foreach (var item in dbObjectList)
+                {
+                    OperatorModel model = new()
+                    {
+                        ID = item.ID,
+                        Name = item.Name,
+                        Primary1 = weapons.Find(x => x.ID == item.Primary1),
+                        Primary2 = weapons.Find(x => x.ID == item.Primary2),
+                        Primary3 = weapons.Find(x => x.ID == item.Primary3),
+                        Secondary1 = weapons.Find(x => x.ID == item.Secondary1),
+                        Secondary2 = weapons.Find(x => x.ID == item.Secondary2),
+                        Secondary3 = weapons.Find(x => x.ID == item.Secondary3),
+                        Gadget1 = gadgets.Find(x => x.ID == item.Gadget1),
+                        Gadget2 = gadgets.Find(x => x.ID == item.Gadget2),
+                        Description = item.Description,
+                        Side = item.Attacker ? Side.Attack : Side.Defense
+                    };
 
-			if (dbObjectList.Count != 0)
-			{
-				foreach (var item in dbObjectList)
-				{
-					OperatorModel model = new()
-					{
-						ID = item.ID,
-						Name = item.Name,
-						Description = item.Description,
-						Side = item.Attacker ? Side.Attack : Side.Defense
-					};
-					WeaponRepository weaponRepo = new(Configuration.Instance.Config.ConnectionString);
-
-					#region accident
-					//TODO: Clean this mess up
-					if (!weaponRepo.Read(item.Primary1, out WeaponModel weapon))
-					{
-						//TODO: Add logging
-						Debug.WriteLine("Weapon read failed for id: " + item.Primary1);
-					}
-					model.Primary1 = weapon;
-					if (!weaponRepo.Read(item.Primary2, out weapon))
-					{
-						//TODO: Add logging
-						Debug.WriteLine("Weapon read failed for id: " + item.Primary2);
-					}
-					model.Primary2 = weapon;
-					if (!weaponRepo.Read(item.Primary3, out weapon))
-					{
-						//TODO: Add logging
-						Debug.WriteLine("Weapon read failed for id: " + item.Primary3);
-					}
-					model.Primary3 = weapon;
-
-					if (!weaponRepo.Read(item.Secondary1, out weapon))
-					{
-						//TODO: Add logging
-						Debug.WriteLine("Weapon read failed for id: " + item.Secondary1);
-					}
-					model.Secondary1 = weapon;
-					if (!weaponRepo.Read(item.Secondary2, out weapon))
-					{
-						//TODO: Add logging
-						Debug.WriteLine("Weapon read failed for id: " + item.Secondary2);
-					}
-					model.Secondary2 = weapon;
-					if (!weaponRepo.Read(item.Secondary3, out weapon))
-					{
-						//TODO: Add logging
-						Debug.WriteLine("Weapon read failed for id: " + item.Secondary3);
-					}
-					model.Secondary3 = weapon;
-
-					GadgetRepository gadgetRepo = new(Configuration.Instance.Config.ConnectionString);
-					if (!gadgetRepo.Read(item.Gadget1, out GadgetModel gadget))
-					{
-						//TODO: Add logging
-						Debug.WriteLine("Gadget read failed for id: " + item.Gadget1);
-					}
-					model.Gadget1 = gadget;
-					if (!gadgetRepo.Read(item.Gadget2, out gadget))
-					{
-						//TODO: Add logging
-						Debug.WriteLine("Weapon read failed for id: " + item.Gadget2);
-					}
-					model.Gadget2 = gadget;
-					#endregion
-
-					list.Add(model);
-				}
-				_operators = list;
-				return list;
-			}
-			list = null;
-			return list;
-		}
-	}
+                    _operators.Add(model);
+                }
+                return _operators;
+            }
+            _operators = new();
+            return _operators;
+        }
+    }
 }

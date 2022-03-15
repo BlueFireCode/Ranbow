@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.357
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranbow", "Ranbow\Ranbow.csproj", "{683A390F-B14B-4E47-A6F8-F3FCFD419224}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RanbowBack", "RanbowBack\RanbowBack.csproj", "{A3672B96-1559-4DAE-80A7-D370BC0C517F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ranbowmizer", "Ranbowmizer\Ranbowmizer.csproj", "{79C7F7B0-0D45-4601-BB87-9D3C5463D6E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranbowmizer", "Ranbowmizer\Ranbowmizer.csproj", "{79C7F7B0-0D45-4601-BB87-9D3C5463D6E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CEC8807C-E5F7-42BB-8B6F-7FF0D7B5A97D}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

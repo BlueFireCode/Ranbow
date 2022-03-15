@@ -1,32 +1,35 @@
-﻿namespace RanbowBack.Enums
+﻿using System;
+
+namespace RanbowBack.Enums
 {
+	[Flags]
 	public enum Sights
 	{
-		Iron_Sights = 0,
-		Holographic = 1,
-		Red_Dot = 2,
-		Reflex = 3,
+		Iron_Sights = 1,
+		Sight = 2,
 		Scope_1point5x = 4,
-		Scope_2point0x = 5,
-		Scope_2point5x = 6,
-		Scope_3point0x = 7
+		Scope_2point0x = 8,
+		Scope_2point5x = 16,
+		Scope_3point0x = 32
 	}
 
+	[Flags]
 	public enum Barrels
 	{
-		Blank = 0,
-		Extended_Barrel = 1,
-		Suppressor = 2,
-		Muzzle_Break = 3,
-		Compensator = 4,
-		Flash_Hider = 5
+		Blank = 1,
+		Extended_Barrel = 2,
+		Suppressor = 4,
+		Muzzle_Break = 8,
+		Compensator = 16,
+		Flash_Hider = 32
 	}
 
+	[Flags]
 	public enum Grips
 	{
-		Blank = 0,
-		Vertical_Grip = 1,
-		Horizontal_Grip = 2
+		Blank = 1,
+		Vertical_Grip = 2,
+		Horizontal_Grip = 3
 	}
 
 	public enum Side

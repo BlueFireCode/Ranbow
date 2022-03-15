@@ -13,9 +13,7 @@ namespace Ranbow.Controllers
     {
         public IActionResult Ranbow()
         {
-            OperatorRepository repo = new(Configuration.Instance.Config.ConnectionString);
-
-            var list = repo.Operators;
+            var list = OperatorRepository.Operators;
             if (list is null)
             {
                 return Error();
@@ -28,9 +26,7 @@ namespace Ranbow.Controllers
 
         public IActionResult Attacker()
         {
-            OperatorRepository repo = new(Configuration.Instance.Config.ConnectionString);
-
-            var list = repo.Operators;
+            var list = OperatorRepository.Operators;
             if (list is null)
             {
                 return Error();
@@ -43,9 +39,7 @@ namespace Ranbow.Controllers
 
         public IActionResult Defender()
         {
-            OperatorRepository repo = new(Configuration.Instance.Config.ConnectionString);
-
-            var list = repo.Operators;
+            var list = OperatorRepository.Operators;
             if (list is null)
             {
                 return Error();

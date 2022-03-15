@@ -56,9 +56,12 @@ namespace Ranbowmizer.Operators
 				Name = wep.Name
 			};
 
-			ret.Sights = wep.Sights.Count > 0 ? new List<Sights> { wep.Sights[random.Next(0, wep.Sights.Count)] }: null;
-			ret.Barrels = wep.Barrels.Count > 0 ? new List<Barrels> { wep.Barrels[random.Next(0, wep.Barrels.Count)] } : null;
-			ret.Grips = wep.Grips.Count > 0 ? new List<Grips> { wep.Grips[random.Next(0, wep.Grips.Count)] } : null;
+			var sightOptions = Enum.GetValues(typeof(Sights)).Cast<Sights>().Where(x => wep.Sights.HasFlag(x)).ToArray();
+			ret.Sights = (byte)wep.Sights > 1 ? sightOptions[random.Next(0, sightOptions.Length)] : Sights.Iron_Sights;
+			var barrelOptions = Enum.GetValues(typeof(Barrels)).Cast<Barrels>().Where(x => wep.Barrels.HasFlag(x)).ToArray();
+			ret.Barrels = (byte)wep.Barrels > 1 ? barrelOptions[random.Next(0, barrelOptions.Length)] : Barrels.Blank;
+			var gripOptions = Enum.GetValues(typeof(Grips)).Cast<Grips>().Where(x => wep.Grips.HasFlag(x)).ToArray();
+			ret.Grips = (byte)wep.Grips > 1 ? gripOptions[random.Next(0, gripOptions.Length)] : Grips.Blank;
 			ret.Laser = wep.Laser && (random.Next(0, 2) != 0);
 
 			return ret;
