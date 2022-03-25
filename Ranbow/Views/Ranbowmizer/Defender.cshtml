@@ -17,6 +17,7 @@
         @Html.HiddenFor(m => Model.Defenders[i].ID)
         @Html.HiddenFor(m => Model.Defenders[i].IsSelected)
     }
+    @Html.HiddenFor(m => Model.GonneSixDisabled)
 }
 @using (Html.BeginForm("Defender", "Ranbowmizer"))
 {
@@ -31,6 +32,7 @@
         @Html.HiddenFor(m => Model.Defenders[i].ID)
         @Html.HiddenFor(m => Model.Defenders[i].IsSelected)
     }
+    @Html.HiddenFor(m => Model.GonneSixDisabled)
 }
 <p style="color:white;">Random Operator: @ViewBag.Random</p>
 <p style="color:white;">Selected Primary: @ViewBag.Random.Primary1</p>

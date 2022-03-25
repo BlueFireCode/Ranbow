@@ -8,7 +8,7 @@ namespace Ranbowmizer.Operators
 {
     public class Randomize
     {
-        public static OperatorModel RandomizeOperator(List<OperatorModel> operators)
+        public static OperatorModel RandomizeOperator(List<OperatorModel> operators, bool skipGonne6)
         {
             Random random = new();
             int num = random.Next(0, operators.Count);
@@ -26,7 +26,7 @@ namespace Ranbowmizer.Operators
                 primaries.Add(op.Primary2);
             if (op.Primary3 is not null)
                 primaries.Add(op.Primary3);
-            ret.Primary1 = RandomizeWeapon(primaries);
+            ret.Primary1 = RandomizeWeapon(primaries, skipGonne6);
 
             List<WeaponModel> secondaries = new();
             secondaries.Add(op.Secondary1);
@@ -34,21 +34,31 @@ namespace Ranbowmizer.Operators
                 secondaries.Add(op.Secondary2);
             if (op.Secondary3 is not null)
                 secondaries.Add(op.Secondary3);
-            ret.Secondary1 = RandomizeWeapon(secondaries);
+            ret.Secondary1 = RandomizeWeapon(secondaries, skipGonne6);
 
             ret.Gadget1 = random.Next(0, 2) == 0 ? op.Gadget1 : op.Gadget2;
 
             return ret;
         }
 
-        public static WeaponModel RandomizeWeapon(List<WeaponModel> weapons)
+        public static WeaponModel RandomizeWeapon(List<WeaponModel> weapons, bool skipGonne6)
         {
             Random random = new();
             WeaponModel wep;
-            if (weapons.Count > 1)
-                wep = weapons[random.Next(0, weapons.Count)];
+            if (skipGonne6)
+            {
+                if (weapons.Count > 1 && !weapons.Any(x => x.Name == "GONNE-6"))
+                    wep = weapons[random.Next(0, weapons.Count)];
+                else
+                    wep = weapons.FirstOrDefault(x => x.Name != "GONNE-6");
+            }
             else
-                wep = weapons.FirstOrDefault();
+            {
+                if (weapons.Count > 1)
+                    wep = weapons[random.Next(0, weapons.Count)];
+                else
+                    wep = weapons.FirstOrDefault();
+            }
             WeaponModel ret = new()
             {
                 ID = wep.ID,

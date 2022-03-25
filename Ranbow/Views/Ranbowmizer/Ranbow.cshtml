@@ -5,7 +5,7 @@
 @model Ranbow.Controllers.MainModel
 @using (Html.BeginForm("Attacker", "Ranbowmizer"))
 {
-    <input type="submit" value="Attack" id="submit" class="randomize-btn-image-atk"/>
+    <input type="submit" value="Attack" id="submit" class="randomize-btn-image-atk" />
 
     <button type="button" class="collapsible">Open Attackers</button>
     <div class="content">
@@ -46,6 +46,16 @@
             }
         </table>
     </div>
+    <table>
+        <tr>
+            <td>
+                @Html.CheckBoxFor(m => Model.GonneSixDisabled)
+            </td>
+            <td style="color: white;">
+                Disable GONNE-6
+            </td>
+        </tr>
+    </table>
     @for (var i = 0; i < Model.Defenders.Count(); i++)
     {
         @Html.HiddenFor(m => Model.Defenders[i].ID)
@@ -54,7 +64,7 @@
 }
 @using (Html.BeginForm("Defender", "Ranbowmizer"))
 {
-    <input type="submit" value="Defense" id="submit" class="randomize-btn-image-def"/>
+    <input type="submit" value="Defense" id="submit" class="randomize-btn-image-def" />
 
     <button type="button" class="collapsible">Open Defenders</button>
     <div class="content">
@@ -95,6 +105,7 @@
             }
         </table>
     </div>
+    @Html.HiddenFor(m => Model.GonneSixDisabled)
     @for (var i = 0; i < Model.Attackers.Count(); i++)
     {
         @Html.HiddenFor(m => Model.Attackers[i].ID)

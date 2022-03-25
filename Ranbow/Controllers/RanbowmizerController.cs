@@ -40,7 +40,7 @@ namespace Ranbow.Controllers
                 return Error();
             }
 
-            ViewBag.Random = Randomize.RandomizeOperator(list.Where(x => x.Side == Side.Attack && x.IsSelected).ToList());
+            ViewBag.Random = Randomize.RandomizeOperator(list.Where(x => x.Side == Side.Attack && x.IsSelected).ToList(), model.GonneSixDisabled);
 
             return View(model);
         }
@@ -58,7 +58,7 @@ namespace Ranbow.Controllers
                 return Error();
             }
 
-            ViewBag.Random = Randomize.RandomizeOperator(list.Where(x => x.Side == Side.Defense && x.IsSelected).ToList());
+            ViewBag.Random = Randomize.RandomizeOperator(list.Where(x => x.Side == Side.Defense && x.IsSelected).ToList(), model.GonneSixDisabled);
 
             return View(model);
         }
@@ -74,5 +74,6 @@ namespace Ranbow.Controllers
     {
         public List<OperatorModel> Attackers { get; set; }
         public List<OperatorModel> Defenders { get; set; }
+        public bool GonneSixDisabled { get; set; }
     }
 }
