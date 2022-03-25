@@ -12,11 +12,12 @@
     padding-right: 7px;
     border-style: hidden;
     border-radius: 0.5em;
-    background-color: #DDDDDD;
+    background-color: #0090ff;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
     .active, .randomize-btn-image-atk:hover {
-        background-color: #BBBBBB;
+        background-color: #66bcff;
     }
 
 .randomize-btn-image-def {
@@ -33,9 +34,10 @@
     padding-right: 7px;
     border-style: hidden;
     border-radius: 0.5em;
-    background-color: #DDDDDD;
+    background-color: #0090ff;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
     .active, .randomize-btn-image-def:hover {
-        background-color: #BBBBBB;
+        background-color: #66bcff;
     }
