@@ -29,7 +29,7 @@ namespace RanbowBack.Enums
     {
         Blank = 1,
         Vertical_Grip = 2,
-        Horizontal_Grip = 3
+        Horizontal_Grip = 4
     }
 
     public enum Side
