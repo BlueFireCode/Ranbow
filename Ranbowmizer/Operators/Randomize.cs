@@ -17,7 +17,9 @@ namespace Ranbowmizer.Operators
             {
                 ID = op.ID,
                 Name = op.Name,
-                Description = op.Description
+                Description = op.Description,
+                IconUrl = op.IconUrl,
+                ImageUrl = op.ImageUrl
             };
 
             List<WeaponModel> primaries = new();
@@ -62,7 +64,8 @@ namespace Ranbowmizer.Operators
             WeaponModel ret = new()
             {
                 ID = wep.ID,
-                Name = wep.Name
+                Name = wep.Name,
+                IconUrl = wep.IconUrl
             };
 
             var sightOptions = Enum.GetValues(typeof(Sights)).Cast<Sights>().Where(x => wep.Sights.HasFlag(x)).ToArray();

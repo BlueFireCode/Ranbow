@@ -36,6 +36,7 @@ namespace RanbowBack.Repositories
                         {
                             ID = (int)reader["ID"],
                             Name = (string)reader["Name"],
+                            IconUrl = Convert.IsDBNull(reader["IconUrl"]) ? null : (string)reader["IconUrl"]
                         });
                     }
                 }
@@ -61,7 +62,8 @@ namespace RanbowBack.Repositories
                     _gadgets.Add(new()
                     {
                         ID = item.ID,
-                        Name = item.Name
+                        Name = item.Name,
+                        IconUrl = item.IconUrl
                     });
                 }
                 return _gadgets;
@@ -87,7 +89,8 @@ namespace RanbowBack.Repositories
                     dbitem = new()
                     {
                         ID = id,
-                        Name = (string)reader["Name"]
+                        Name = (string)reader["Name"],
+                        IconUrl = Convert.IsDBNull(reader["IconUrl"]) ? null : (string)reader["IconUrl"]
                     };
                 }
                 DbConnection.Close();
@@ -112,7 +115,8 @@ namespace RanbowBack.Repositories
                 entity = new()
                 {
                     ID = dbitem.ID,
-                    Name = dbitem.Name
+                    Name = dbitem.Name,
+                    IconUrl = dbitem.IconUrl
                 };
                 return result;
             }

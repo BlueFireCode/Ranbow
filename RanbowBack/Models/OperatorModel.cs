@@ -5,6 +5,7 @@ namespace RanbowBack.Models
 {
     public class OperatorModel : BaseModel
     {
+        public string ImageUrl { get; set; }
         public bool IsSelected { get; set; } = true;
         public WeaponModel Primary1 { get; set; }
         public WeaponModel Primary2 { get; set; }

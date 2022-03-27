@@ -5,6 +5,7 @@ namespace RanbowBack.DbObjects
     internal class DbOperator : DbObject
     {
 #nullable enable
+        public string? ImageUrl { get; set; }
         public int Primary1 { get; set; }
         public int? Primary2 { get; set; }
         public int? Primary3 { get; set; }

@@ -20,9 +20,9 @@ namespace Ranbow.Controllers
                 return Error();
             }
 
-            return View(new MainModel() 
-            { 
-                Attackers = list.Where(x => x.Side == Side.Attack).ToList(), 
+            return View(new MainModel()
+            {
+                Attackers = list.Where(x => x.Side == Side.Attack).ToList(),
                 Defenders = list.Where(x => x.Side == Side.Defense).ToList()
             });
         }
@@ -44,7 +44,7 @@ namespace Ranbow.Controllers
 
             return View(model);
         }
-        
+
         [HttpPost]
         public IActionResult Defender(MainModel model)
         {
@@ -74,6 +74,6 @@ namespace Ranbow.Controllers
     {
         public List<OperatorModel> Attackers { get; set; }
         public List<OperatorModel> Defenders { get; set; }
-        public bool GonneSixDisabled { get; set; }
+        public bool GonneSixDisabled { get; set; } = true;
     }
 }

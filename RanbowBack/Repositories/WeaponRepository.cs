@@ -37,6 +37,7 @@ namespace RanbowBack.Repositories
                         {
                             ID = (int)reader["ID"],
                             Name = (string)reader["Name"],
+                            IconUrl = Convert.IsDBNull(reader["IconUrl"]) ? null : (string)reader["IconUrl"],
 #nullable enable
                             Sights = (byte)reader["Sight"],
                             Barrels = (byte)reader["Barrel"],
@@ -69,6 +70,7 @@ namespace RanbowBack.Repositories
                     {
                         ID = item.ID,
                         Name = item.Name,
+                        IconUrl = item.IconUrl,
                         Sights = (Sights)item.Sights,
                         Barrels = (Barrels)item.Barrels,
                         Grips = (Grips)item.Grips,
@@ -104,6 +106,7 @@ namespace RanbowBack.Repositories
                     {
                         ID = (int)id,
                         Name = (string)reader["Name"],
+                        IconUrl = Convert.IsDBNull(reader["IconUrl"]) ? null : (string)reader["IconUrl"],
 #nullable enable
                         Sights = (byte)reader["Sight"],
                         Barrels = (byte)reader["Barrel"],
@@ -134,6 +137,7 @@ namespace RanbowBack.Repositories
                 {
                     ID = dbitem.ID,
                     Name = dbitem.Name,
+                    IconUrl = dbitem.IconUrl,
                     Sights = (Sights)dbitem.Sights,
                     Barrels = (Barrels)dbitem.Barrels,
                     Grips = (Grips)dbitem.Grips,

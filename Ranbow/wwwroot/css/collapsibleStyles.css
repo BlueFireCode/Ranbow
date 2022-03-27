@@ -16,8 +16,9 @@
 
 .content {
     padding: 0 18px;
-    background-color: #333538;
+    background-color: #343a40;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    overflow-x: auto;
 }

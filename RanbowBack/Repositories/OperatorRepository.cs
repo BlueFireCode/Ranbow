@@ -38,6 +38,8 @@ namespace RanbowBack.Repositories
                         {
                             ID = (int)reader["ID"],
                             Name = (string)reader["Name"],
+                            IconUrl = Convert.IsDBNull(reader["IconUrl"]) ? null : (string)reader["IconUrl"],
+                            ImageUrl = Convert.IsDBNull(reader["ImageUrl"]) ? null : (string)reader["ImageUrl"],
                             Primary1 = (int)reader["Primary1"],
                             Primary2 = Convert.IsDBNull(reader["Primary2"]) ? null : (int?)reader["Primary2"],
                             Primary3 = Convert.IsDBNull(reader["Primary3"]) ? null : (int?)reader["Primary3"],
@@ -78,6 +80,8 @@ namespace RanbowBack.Repositories
                     {
                         ID = item.ID,
                         Name = item.Name,
+                        IconUrl = item.IconUrl,
+                        ImageUrl = item.ImageUrl,
                         Primary1 = weapons.Find(x => x.ID == item.Primary1),
                         Primary2 = weapons.Find(x => x.ID == item.Primary2),
                         Primary3 = weapons.Find(x => x.ID == item.Primary3),

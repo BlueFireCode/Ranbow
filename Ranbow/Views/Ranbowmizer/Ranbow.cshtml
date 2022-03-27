@@ -9,9 +9,10 @@
 
     <button type="button" class="collapsible">Open Attackers</button>
     <div class="content">
-        <table style="color: white;">
+        <table class="table table-dark table-info">
             <tr>
-                <th>Select</th>
+                <th>Enable</th>
+                <th>Icon</th>
                 <th>Name</th>
                 <th>Primary 1</th>
                 <th>Primary 2</th>
@@ -21,7 +22,6 @@
                 <th>Secondary 3</th>
                 <th>Gadget 1</th>
                 <th>Gadget 2</th>
-                <th>Description</th>
                 <th>Side</th>
             </tr>
             @for (var i = 0; i < Model.Attackers.Count(); i++)
@@ -31,6 +31,7 @@
                         @Html.HiddenFor(m => Model.Attackers[i].ID)
                         @Html.CheckBoxFor(m => Model.Attackers[i].IsSelected)
                     </td>
+                    <td><img src="@Model.Attackers[i].IconUrl" width="50" height="50"/></td>
                     <td>@Html.DisplayFor(m => Model.Attackers[i].Name)</td>
                     <td>@Html.DisplayFor(m => Model.Attackers[i].Primary1.Name)</td>
                     <td>@Html.DisplayFor(m => Model.Attackers[i].Primary2.Name)</td>
@@ -40,7 +41,6 @@
                     <td>@Html.DisplayFor(m => Model.Attackers[i].Secondary3.Name)</td>
                     <td>@Html.DisplayFor(m => Model.Attackers[i].Gadget1.Name)</td>
                     <td>@Html.DisplayFor(m => Model.Attackers[i].Gadget2.Name)</td>
-                    <td>@Html.DisplayFor(m => Model.Attackers[i].Description)</td>
                     <td>@Html.DisplayFor(m => Model.Attackers[i].Side)</td>
                 </tr>
             }
@@ -68,9 +68,10 @@
 
     <button type="button" class="collapsible">Open Defenders</button>
     <div class="content">
-        <table style="color: white;">
+        <table class="table table-dark table-info">
             <tr>
-                <th>Select</th>
+                <th>Enable</th>
+                <th>Icon</th>
                 <th>Name</th>
                 <th>Primary 1</th>
                 <th>Primary 2</th>
@@ -80,7 +81,6 @@
                 <th>Secondary 3</th>
                 <th>Gadget 1</th>
                 <th>Gadget 2</th>
-                <th>Description</th>
                 <th>Side</th>
             </tr>
             @for (var i = 0; i < Model.Defenders.Count(); i++)
@@ -90,6 +90,7 @@
                         @Html.HiddenFor(m => Model.Defenders[i].ID)
                         @Html.CheckBoxFor(m => Model.Defenders[i].IsSelected)
                     </td>
+                    <td><img src="@Model.Defenders[i].IconUrl" width="50" height="50"/></td>
                     <td>@Html.DisplayFor(m => Model.Defenders[i].Name)</td>
                     <td>@Html.DisplayFor(m => Model.Defenders[i].Primary1.Name)</td>
                     <td>@Html.DisplayFor(m => Model.Defenders[i].Primary2.Name)</td>
@@ -99,7 +100,6 @@
                     <td>@Html.DisplayFor(m => Model.Defenders[i].Secondary3.Name)</td>
                     <td>@Html.DisplayFor(m => Model.Defenders[i].Gadget1.Name)</td>
                     <td>@Html.DisplayFor(m => Model.Defenders[i].Gadget2.Name)</td>
-                    <td>@Html.DisplayFor(m => Model.Defenders[i].Description)</td>
                     <td>@Html.DisplayFor(m => Model.Defenders[i].Side)</td>
                 </tr>
             }
