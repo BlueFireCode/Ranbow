@@ -22,7 +22,6 @@
                 <th>Secondary 3</th>
                 <th>Gadget 1</th>
                 <th>Gadget 2</th>
-                <th>Side</th>
             </tr>
             @for (var i = 0; i < Model.Attackers.Count(); i++)
             {
@@ -41,7 +40,6 @@
                     <td>@Html.DisplayFor(m => Model.Attackers[i].Secondary3.Name)</td>
                     <td>@Html.DisplayFor(m => Model.Attackers[i].Gadget1.Name)</td>
                     <td>@Html.DisplayFor(m => Model.Attackers[i].Gadget2.Name)</td>
-                    <td>@Html.DisplayFor(m => Model.Attackers[i].Side)</td>
                 </tr>
             }
         </table>
@@ -81,7 +79,6 @@
                 <th>Secondary 3</th>
                 <th>Gadget 1</th>
                 <th>Gadget 2</th>
-                <th>Side</th>
             </tr>
             @for (var i = 0; i < Model.Defenders.Count(); i++)
             {
@@ -100,7 +97,6 @@
                     <td>@Html.DisplayFor(m => Model.Defenders[i].Secondary3.Name)</td>
                     <td>@Html.DisplayFor(m => Model.Defenders[i].Gadget1.Name)</td>
                     <td>@Html.DisplayFor(m => Model.Defenders[i].Gadget2.Name)</td>
-                    <td>@Html.DisplayFor(m => Model.Defenders[i].Side)</td>
                 </tr>
             }
         </table>
