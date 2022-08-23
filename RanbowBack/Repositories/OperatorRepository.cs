@@ -48,6 +48,7 @@ namespace RanbowBack.Repositories
                             Secondary3 = Convert.IsDBNull(reader["Secondary3"]) ? null : (int?)reader["Secondary3"],
                             Gadget1 = (int)reader["Gadget1"],
                             Gadget2 = (int)reader["Gadget2"],
+                            Gadget3 = Convert.IsDBNull(reader["Gadget3"]) ? null : (int?)reader["Gadget3"],
 #nullable enable
                             Description = Convert.IsDBNull(reader["Description"]) ? null : (string?)reader["Description"],
 #nullable disable
@@ -90,6 +91,7 @@ namespace RanbowBack.Repositories
                         Secondary3 = weapons.Find(x => x.ID == item.Secondary3),
                         Gadget1 = gadgets.Find(x => x.ID == item.Gadget1),
                         Gadget2 = gadgets.Find(x => x.ID == item.Gadget2),
+                        Gadget3 = gadgets.Find(x => x.ID == item.Gadget3),
                         Description = item.Description,
                         Side = item.Attacker ? Side.Attack : Side.Defense
                     };

@@ -14,6 +14,7 @@ namespace RanbowBack.DbObjects
         public int? Secondary3 { get; set; }
         public int Gadget1 { get; set; }
         public int Gadget2 { get; set; }
+        public int? Gadget3 { get; set; }
         public string? Description { get; set; }
         public bool Attacker { get; set; }
 #nullable disable
