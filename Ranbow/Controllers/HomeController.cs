@@ -25,5 +25,10 @@ namespace Ranbow.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult Icon()
+        {
+            return File("~/images/Logos/bluefire-01.png", "image/png");
+        }
     }
 }
