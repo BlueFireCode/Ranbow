@@ -5,8 +5,8 @@ use crate::model::attachments::Attachments;
 
 #[derive(Serialize, Deserialize)]
 pub struct Weapon {
-    name: String,
-    icon_url: String,
-    attachment_options: AttachmentOptions,
-    attachments: Attachments,
+    pub name: String,
+    pub icon_url: String,
+    pub attachment_options: AttachmentOptions,
+    pub attachments: Attachments,
 }

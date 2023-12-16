@@ -1,0 +1,14 @@
+.custom-checkbox-input {
+    display: none;
+}
+
+.custom-checkbox-content {
+    user-select: none;
+    filter: grayscale(100%) brightness(50%);
+    width: 150px;
+}
+
+.custom-checkbox-input:checked ~ .custom-checkbox-content {
+    filter: none;
+    color: var(--bs-table-color-state,var(--bs-table-color-type,var(--bs-table-color)));
+}

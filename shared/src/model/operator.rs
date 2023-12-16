@@ -7,12 +7,12 @@ use crate::model::gadget::Gadget;
 #[derive(Serialize, Deserialize)]
 pub struct Operator {
     #[serde(rename = "_id")]
-    id: ObjectId,
-    name: String,
-    icon_url: String,
-    image_url: String,
-    attacker: bool,
-    primaries: Vec<Weapon>,
-    secondaries: Vec<Weapon>,
-    gadgets: Vec<Gadget>,
+    pub id: ObjectId,
+    pub name: String,
+    pub icon_url: String,
+    pub image_url: String,
+    pub attacker: bool,
+    pub primaries: Vec<Weapon>,
+    pub secondaries: Vec<Weapon>,
+    pub gadgets: Vec<Gadget>,
 }

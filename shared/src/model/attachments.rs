@@ -2,7 +2,7 @@ use serde::{Serialize, Deserialize};
 
 #[derive(Serialize, Deserialize)]
 pub struct Attachments {
-    sight: i64,
-    muzzle: Vec<String>,
-    grip: Vec<String>,
+    pub sight: i64,
+    pub muzzle: Vec<String>,
+    pub grip: Vec<String>,
 }
