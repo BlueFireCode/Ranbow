@@ -27,7 +27,6 @@ pub fn selector() -> Html {
     }
 
     let on_change = Callback::from(move |value: OperatorDisplay| {
-        //do something here
         match value.selected {
             Some(selected) => info!("on_change event called. OpId: {} - OpName: {} - Selected: {}", value.id, value.name, selected),
             None => {},
@@ -36,27 +35,27 @@ pub fn selector() -> Html {
 
     if let Some(state) = &*state {
         html! {
-            <div>
-                <button class="btn btn-outline-secondary mt-3 ms-2" type="button" data-db-toggle="collapse" data-bs-target="#collapseSelector" aria-expanded="true" aria-controls="collapseSelector">
+            <div style="float: left;">
+                <input class="collapsable-input" type="checkbox" id="collapsable" checked={true}/>
+                <label class="collapsable-label ms-4 mt-3" for="collapsable">
                     <svg aria-hidden="true" focusable="false" role="img" class="mb-1" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom; overflow: visible;">
                         <path d="m4.177 7.823 2.396-2.396A.25.25 0 0 1 7 5.604v4.792a.25.25 0 0 1-.427.177L4.177 8.177a.25.25 0 0 1 0-.354Z"></path>
                         <path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25H9.5v-13Zm12.5 13a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25H11v13Z"></path>
                     </svg>
-                </button>
-                <div class="collapse collapse-horizontal show" id="collapseSelector">
-                    <div class="border-top border-end border-secondary vh-100 mt-3 p-2 w-25" data-bs-smooth-scroll="true" style="display: flex; border-top-right-radius: 0.5rem; overflow-y: scroll; min-width:175px; max-width: 175px;">
-                        <table class="table table-borderless">
-                            <tbody>
-                                {
-                                    state.into_iter().map(|operator_display| {
-                                        html! {
-                                            <OperatorCheckBox operator_display={operator_display.clone()} on_change={on_change.clone()}/>
-                                        }
-                                    }).collect::<Html>()
+                </label>
+                <div class="collapsable-content border-top border-end border-bottom border-secondary mt-3 p-2 w-25 selector-list"
+                    data-bs-smooth-scroll="true">
+                    <table class="table table-borderless">
+                        <tbody>
+                            {
+                                state.into_iter().map(|operator_display| {
+                                    html! {
+                                        <OperatorCheckBox operator_display={operator_display.clone()} on_change={on_change.clone()}/>
+                                    }
+                                }).collect::<Html>()
                                 }
-                            </tbody>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         }
