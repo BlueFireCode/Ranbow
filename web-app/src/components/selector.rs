@@ -1,9 +1,9 @@
+use gloo_storage::{Storage, LocalStorage};
 use reqwasm::http::Request;
 use shared::model::operator_display::OperatorDisplay;
 use wasm_bindgen::JsCast;
 use yew::prelude::*;
 use web_sys::HtmlInputElement;
-use log::info;
 
 async fn fetch_operator_displays() -> Vec<OperatorDisplay> {
     Request::get("http://192.168.0.146:8080/api/operator_displays/0").
@@ -20,15 +20,23 @@ pub fn selector() -> Html {
             let state = state.clone();
             wasm_bindgen_futures::spawn_local(async move {
                 let fetched_state = fetch_operator_displays().await;
+                let list = fetched_state.clone();
                 state.set(Some(fetched_state));
+                let _ = <LocalStorage as Storage>::set("ranbow_selected_operators", list);
             });
             || ()
         })
     }
 
+    let operator_list = use_mut_ref(|| Vec::<OperatorDisplay>::new());
+
+    let list = operator_list.clone();
     let on_change = Callback::from(move |value: OperatorDisplay| {
         match value.selected {
-            Some(selected) => info!("on_change event called. OpId: {} - OpName: {} - Selected: {}", value.id, value.name, selected),
+            Some(selected) => {
+                list.borrow_mut().iter_mut().find(|e| e.id == value.id).unwrap().selected = Some(selected);
+                let _ = <LocalStorage as Storage>::set("ranbow_selected_operators", list.borrow().to_vec());
+            },
             None => {},
         };
     });
@@ -49,11 +57,12 @@ pub fn selector() -> Html {
                         <tbody>
                             {
                                 state.into_iter().map(|operator_display| {
+                                    operator_list.borrow_mut().push(operator_display.clone());
                                     html! {
                                         <OperatorCheckBox operator_display={operator_display.clone()} on_change={on_change.clone()}/>
                                     }
                                 }).collect::<Html>()
-                                }
+                            }
                         </tbody>
                     </table>
                 </div>
