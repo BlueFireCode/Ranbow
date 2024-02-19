@@ -1,0 +1,9 @@
+FROM rust:1.76.0-slim-bullseye
+
+WORKDIR /app
+COPY . .
+
+EXPOSE 80
+WORKDIR /app/db-api
+
+CMD [ "cargo", "run", "-r" ]

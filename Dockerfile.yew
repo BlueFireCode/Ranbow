@@ -1,0 +1,14 @@
+FROM rust:1.76.0-slim-bullseye
+
+RUN rustup target add wasm32-unknown-unknown
+
+RUN cargo install trunk --version 0.18.8
+RUN cargo install -f wasm-bindgen-cli --version 0.2.91
+
+WORKDIR /app
+COPY . .
+
+EXPOSE 80
+
+WORKDIR /app/web-app
+CMD [ "trunk", "serve", "--release", "--port", "80", "--address", "0.0.0.0" ]

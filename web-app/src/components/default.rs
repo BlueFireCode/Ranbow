@@ -1,13 +1,14 @@
 use reqwasm::http::Request;
 use shared::model::operator::Operator;
 use yew::prelude::*;
+use crate::environment;
 use crate::logic::randomizer;
 
 use crate::components::{full_op_display::FullOpDisplay, selector::Selector};
 
 async fn fetch_operator(id: &str) -> Operator {
-    let id = format!("http://192.168.0.146:8080/api/operator/{}", id);
-    Request::get(&id)
+    let url = format!("{}/api/operator/{}", environment::ranbow_host_url(), id);
+    Request::get(&url)
         .send().await.unwrap()
         .json().await.unwrap()
 }

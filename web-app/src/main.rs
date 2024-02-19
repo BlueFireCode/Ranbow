@@ -1,5 +1,6 @@
 mod components;
 mod logic;
+mod environment;
 
 use yew::prelude::*;
 use yew_router::prelude::*;

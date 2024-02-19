@@ -4,9 +4,11 @@ use shared::model::operator_display::OperatorDisplay;
 use wasm_bindgen::JsCast;
 use web_sys::HtmlInputElement;
 use yew::prelude::*;
+use crate::environment;
 
 async fn fetch_operator_displays() -> Vec<OperatorDisplay> {
-    Request::get("http://192.168.0.146:8080/api/operator_displays/0")
+    let url = format!("{}/api/operator_displays/0", environment::ranbow_host_url());
+    Request::get(&url)
         .send().await.unwrap()
         .json().await.unwrap()
 }

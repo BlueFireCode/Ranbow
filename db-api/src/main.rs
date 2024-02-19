@@ -84,7 +84,7 @@ async fn get_operator(db: web::Data<Database>, id:web::Path<String>) -> impl Res
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     // get db uri from envvars or default
-    let mongo_uri = std::env::var("MONGODB_URI").unwrap_or_else(|_| "mongodb://192.168.0.146:27017".into());
+    let mongo_uri = std::env::var("MONGODB_URI").unwrap_or_else(|_| "mongodb://localhost:27017".into());
 
     #[cfg(debug_assertions)]
     let debug = true;
@@ -93,7 +93,7 @@ async fn main() -> std::io::Result<()> {
 
     // set up server address for actix
     let actix_port = std::env::var("ACTIX_PORT").unwrap_or_else(|_| "6969".into());
-    let server_addr = format!("{}:{}", if debug {"192.168.0.146"} else {"0.0.0.0"}, actix_port);
+    let server_addr = format!("{}:{}", if debug {"127.0.0.1"} else {"0.0.0.0"}, actix_port);
 
     // initialize the db driver
     let mongo_client = Client::with_uri_str(mongo_uri).await.expect("Failed to connect.");
@@ -101,7 +101,7 @@ async fn main() -> std::io::Result<()> {
     // set up the HttpServer
     HttpServer::new(move || {
         App::new()
-            // give the handler functions some data - here an an object for db access
+            // give the handler functions some data - here an object for db access
             .app_data(web::Data::new(mongo_client.database("ranbow").clone()))
             // register service functions
             .service(get_operator_displays)
