@@ -7,5 +7,6 @@ pub struct OperatorDisplay {
     pub id: ObjectId,
     pub name: String,
     pub icon_url: String,
-    pub selected: Option<bool>
+    pub selected: Option<bool>,
+    pub attacker: bool
 }

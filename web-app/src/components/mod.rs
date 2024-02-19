@@ -4,3 +4,4 @@ pub mod tdm;
 pub mod team;
 pub mod login;
 pub mod selector;
+pub mod full_op_display;

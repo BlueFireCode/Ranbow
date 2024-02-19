@@ -12,7 +12,7 @@ async fn get_operator_displays(db: web::Data<Database>, side: web::Path<u8>) -> 
     let side = side.into_inner();
     let collection = db.collection("operators");
     let filter = if side == 1 { Some(doc! {"attacker": true}) } else if side == 2 { Some(doc! {"attacker": false}) } else { None };
-    let options = FindOptions::builder().projection(doc! {"_id": 1, "name": 1, "icon_url": 1}).build();
+    let options = FindOptions::builder().projection(doc! {"_id": 1, "name": 1, "icon_url": 1, "attacker": 1}).build();
     let query: Result<mongodb::Cursor<OperatorDisplay>, mongodb::error::Error> = collection.find(filter, options).await;
     match query {
         Ok(mut cursor) => {
