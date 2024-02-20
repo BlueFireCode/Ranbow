@@ -92,7 +92,7 @@ async fn main() -> std::io::Result<()> {
     let debug = false;
 
     // set up server address for actix
-    let actix_port = std::env::var("ACTIX_PORT").unwrap_or_else(|_| "6969".into());
+    let actix_port = std::env::var("ACTIX_PORT").unwrap_or_else(|_| if debug {"6969"} else {"80"}.into());
     let server_addr = format!("{}:{}", if debug {"127.0.0.1"} else {"0.0.0.0"}, actix_port);
 
     // initialize the db driver

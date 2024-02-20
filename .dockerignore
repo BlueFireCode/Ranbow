@@ -3,6 +3,8 @@ dist
 Cargo.lock
 Dockerfile.actix
 Dockerfile.yew
+web-app/Trunk.toml
 LICENSE
 README.md
 .gitignore
+.git
