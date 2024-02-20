@@ -50,6 +50,7 @@ fn App() -> Html {
 
     html! {
         <div>
+            <header>
             <BrowserRouter>
                 <nav class="navbar navbar-expand-lg border-bottom bd-body-tertiary" style="background-color:var(--bs-purple)">
                     <div class="container-fluid">
@@ -82,7 +83,15 @@ fn App() -> Html {
                 </nav>
                 <Switch<Route> render={switch}/>
             </BrowserRouter>
+            </header>
+            <div class="container">
             { node }
+            </div>
+            <footer class="footer border-top" style="text-align: center; padding: 3px; position: fixed; left: 0; bottom: 0; width: 100%; height: 50px">
+                <p class="mx-5" style="display: inline;">{"©2024 "}<a href="https://github.com/BlueFireCode/ranbow">{"BlueFireCode"}</a></p>
+                <p class="mx-5" style="display: inline;">{"More up to date than the "}<a href="https://www.ubisoft.com/en-gb/game/rainbow-six/siege/game-info/operators">{"official website"}</a>{"!"}</p>
+                <p class="mx-5" style="display: inline;">{"Author: JulianusIV"}</p>
+            </footer>
         </div>
     }
 }
