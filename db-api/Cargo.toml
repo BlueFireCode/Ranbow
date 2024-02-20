@@ -13,6 +13,7 @@ serde = { version = "^1", features = ["derive"] }
 log = "^0.4"
 derive_more = "^0.99"
 shared = { path = "../shared" }
-mongodb = "^2.5"
+mongodb = "^2.8"
 futures = "^0.3"
 fuzzy-matcher = "*"
+reqwest = { version = "^0.11", features = ["json"] }

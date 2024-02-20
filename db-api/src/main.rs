@@ -2,9 +2,10 @@ use std::str::FromStr;
 
 use actix_web::{get, App, HttpResponse, HttpServer, Responder, web};
 use futures::StreamExt;
-use mongodb::{Client, bson::{doc, Document}, bson::oid::ObjectId, options::FindOptions, Database};
+use mongodb::{bson::{doc, oid::ObjectId, Document}, options::FindOptions, Client, Collection, Database};
 
-use shared::model::operator::Operator;
+use serde::{de::DeserializeOwned, Serialize};
+use shared::model::{gadget::Gadget, operator::Operator, version::Version};
 use shared::model::operator_display::OperatorDisplay;
 
 #[get("/operator_displays/{side}")]
@@ -81,6 +82,50 @@ async fn get_operator(db: web::Data<Database>, id:web::Path<String>) -> impl Res
     }
 }
 
+async fn check_version_and_drop(db: Database, gh_url: &str) {
+    let version = db.collection::<Version>("version")
+        .find_one(None, None).await;
+    match version {
+        Ok(version) => {
+            if let Some(version) = version {
+                let json_obj = reqwest::get(gh_url)
+                    .await.unwrap()
+                    .json::<Vec<Version>>().await.unwrap();
+
+                let ver = json_obj.first().unwrap();
+                if ver.version_number == version.version_number {
+                    return;
+                }
+                _ = db.drop(None).await;
+                check_and_insert(db.collection::<Version>("version"), gh_url).await;
+            }
+        },
+        Err(err) => println!("{}", err)
+    }
+}
+
+async fn check_and_insert<T: DeserializeOwned + Serialize>(collection: Collection<T>, gh_url: &str) {
+    let count = collection.count_documents(None, None).await;
+    match count {
+        Ok(count) => {
+            if count != 0 {
+                return;
+            }
+
+            let json_obj = reqwest::get(gh_url)
+                .await.unwrap()
+                .json::<Vec<T>>().await.unwrap();
+
+            let res = collection.insert_many(json_obj, None).await;
+            match res {
+                Ok(_) => println!("Successfully inserted collection."),
+                Err(err) => println!("{}", err)
+            }
+        }
+        Err(err) => println!("{}", err)
+    }
+}
+
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     // get db uri from envvars or default
@@ -97,6 +142,24 @@ async fn main() -> std::io::Result<()> {
 
     // initialize the db driver
     let mongo_client = Client::with_uri_str(mongo_uri).await.expect("Failed to connect.");
+
+    // if empty create version collection
+    check_and_insert(
+        mongo_client.database("ranbow").clone().collection::<Version>("version"),
+        "https://raw.githubusercontent.com/BlueFireCode/Ranbow/MongoCollections/ranbow/version.json").await;
+    // if version differs from latest, drop db and recreate with latest version
+    check_version_and_drop(
+        mongo_client.database("ranbow").clone(),
+        "https://raw.githubusercontent.com/BlueFireCode/Ranbow/MongoCollections/ranbow/version.json").await;
+
+    // insert gadgets and ops from gh, if collection is not present
+    check_and_insert(
+        mongo_client.database("ranbow").clone().collection::<Gadget>("gadgets"),
+        "https://raw.githubusercontent.com/BlueFireCode/Ranbow/MongoCollections/ranbow/gadgets.json").await;
+    check_and_insert(
+        mongo_client.database("ranbow").clone().collection::<Operator>("operators"),
+        "https://raw.githubusercontent.com/BlueFireCode/Ranbow/MongoCollections/ranbow/operators.json").await;
+
 
     // set up the HttpServer
     HttpServer::new(move || {
