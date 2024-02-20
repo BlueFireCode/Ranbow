@@ -2,6 +2,7 @@ mod components;
 mod logic;
 mod environment;
 
+use components::operators::{OperatorView, Operators};
 use yew::prelude::*;
 use yew_router::prelude::*;
 
@@ -21,6 +22,10 @@ pub enum Route {
     TDM,
     #[at("/Team")]
     Team,
+    #[at("/Operators")]
+    Operators,
+    #[at("/Operator/:id")]
+    Operator { id: String },
     #[at("/Login")]
     Login,
     #[not_found]
@@ -34,6 +39,8 @@ fn switch(routes: Route) -> Html {
         Route::FullGame => html!{ <FullGame/> },
         Route::TDM => html!{ <TDM/> },
         Route::Team => html!{ <Team/> },
+        Route::Operators => html!{ <Operators/> },
+        Route::Operator { id } => html!{ <OperatorView {id}/> },
         Route::Login => html!{ <Login/> },
         Route::NotFound => html!{ <img src={"https://http.cat/404"}/> }
     }
@@ -74,6 +81,9 @@ fn App() -> Html {
                                 <li class="nav-item">
                                     <Link<Route> classes={"nav-link"} to={Route::Team}>{"Team"}</Link<Route>>
                                 </li>
+                                <li class="nav-item">
+                                    <Link<Route> classes={"nav-link"} to={Route::Operators}>{"Operators"}</Link<Route>>
+                                </li>
                             </ul>
                             <div class="d-flex">
                                 <Link<Route> classes={"btn btn-outline-light"} to={Route::Login}>{"Login"}</Link<Route>>
@@ -87,7 +97,7 @@ fn App() -> Html {
             <div class="container">
             { node }
             </div>
-            <footer class="footer border-top" style="text-align: center; padding: 3px; position: fixed; left: 0; bottom: 0; width: 100%; height: 50px">
+            <footer class="footer border-top" style="text-align: center; padding: 3px; position: fixed; left: 0; bottom: 0; width: 100%; height: 3rem; background-color: var(--bs-body-bg);">
                 <p class="mx-5" style="display: inline;">{"©2024 "}<a href="https://github.com/BlueFireCode/ranbow">{"BlueFireCode"}</a></p>
                 <p class="mx-5" style="display: inline;">{"More up to date than the "}<a href="https://www.ubisoft.com/en-gb/game/rainbow-six/siege/game-info/operators">{"official website"}</a>{"!"}</p>
                 <p class="mx-5" style="display: inline;">{"Author: JulianusIV"}</p>

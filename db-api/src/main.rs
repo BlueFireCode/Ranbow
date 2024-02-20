@@ -8,6 +8,27 @@ use serde::{de::DeserializeOwned, Serialize};
 use shared::model::{gadget::Gadget, operator::Operator, version::Version};
 use shared::model::operator_display::OperatorDisplay;
 
+#[get("/operators/{side}")]
+async fn get_operators(db: web::Data<Database>, side: web::Path<u8>) -> impl Responder {
+    let side = side.into_inner();
+    let collection = db.collection("operators");
+    let filter = if side == 1 { Some(doc! {"attacker": true}) } else if side == 2 { Some(doc! {"attacker": false}) } else {None};
+    let query: Result<mongodb::Cursor<Operator>, mongodb::error::Error> = collection.find(filter, None).await;
+    match query {
+        Ok(mut cursor) => {
+            let mut result: Vec<Operator> = Vec::new();
+            while let Some(doc) = cursor.next().await {
+                match doc {
+                    Ok(operator) => result.push(operator),
+                    Err(err) => return HttpResponse::InternalServerError().body(err.to_string())
+                };
+            }
+            HttpResponse::Ok().json(result)
+        },
+        Err(err) => HttpResponse::InternalServerError().body(err.to_string())
+    }
+}
+
 #[get("/operator_displays/{side}")]
 async fn get_operator_displays(db: web::Data<Database>, side: web::Path<u8>) -> impl Responder {
     let side = side.into_inner();
@@ -167,6 +188,7 @@ async fn main() -> std::io::Result<()> {
             // give the handler functions some data - here an object for db access
             .app_data(web::Data::new(mongo_client.database("ranbow").clone()))
             // register service functions
+            .service(get_operators)
             .service(get_operator_displays)
             .service(get_operator_ids)
             .service(get_operator)
