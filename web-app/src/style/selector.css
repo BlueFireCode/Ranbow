@@ -1,0 +1,25 @@
+.custom-checkbox-input {
+    display: none;
+}
+
+.custom-checkbox-content {
+    user-select: none;
+    filter: grayscale(100%) brightness(50%);
+    width: 150px;
+}
+
+.custom-checkbox-input:checked ~ .custom-checkbox-content {
+    filter: none;
+    color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
+}
+
+.selector-list {
+    height: 75vh !important;
+    display: flex;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-width: 175px;
+    max-width: 175px;
+}

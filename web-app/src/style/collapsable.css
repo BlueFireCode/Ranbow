@@ -1,0 +1,28 @@
+.collapsable-input {
+    display: none;
+}
+
+.collapsable-content {
+    display: flex;
+}
+
+.collapsable-label {
+    --bs-text-opacity: 1;
+    color: var(--bs-tertiary-color) !important;
+}
+
+.collapsable-input:checked ~ .collapsable-content {
+    display: none;
+}
+
+.collapsable-input:checked ~ .collapsable-label {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-light-rgb),var(--bs-text-opacity)) !important;
+}
+
+.selector-collapsable-svg {
+    display: inline-block;
+    user-select: none;
+    vertical-align: text-bottom;
+    overflow: visible;
+}

@@ -1,0 +1,15 @@
+.op-weapon-panel, .op-name-panel {
+    width: 290px;
+    text-align: center;
+}
+
+.weapon-display-panel {
+    display: table-cell;
+    width: 290px;
+}
+
+.weapon-collapsable-button {
+    width: 290px;
+    text-align: center;
+    font-size: calc(1.275rem + .3vw);
+}
