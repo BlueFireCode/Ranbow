@@ -1,0 +1,13 @@
+.operators-button-left, .operators-button-right {
+    width: 49%;
+}
+
+.operators-button-left {
+    float: left;
+    margin-left: 5px;
+}
+
+.operators-button-right {
+    float: right;
+    margin-right: 5px;
+}

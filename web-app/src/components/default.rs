@@ -1,13 +1,12 @@
 use reqwasm::http::Request;
 use shared::model::operator::Operator;
 use yew::prelude::*;
-use crate::environment;
-use crate::logic::randomizer;
 
+use crate::logic::randomizer;
 use crate::components::{full_op_display::FullOpDisplay, selector::Selector};
 
 async fn fetch_operator(id: &str) -> Operator {
-    let url = format!("{}/api/operator/{}", environment::ranbow_host_url(), id);
+    let url = format!("/api/operator/{}", id);
     Request::get(&url)
         .send().await.unwrap()
         .json().await.unwrap()
@@ -46,7 +45,7 @@ pub fn default() -> Html {
     });
 
     html! {
-        <div style="display: flex;flex-direction: row;width: 100%">
+        <div class="default-content-div">
             <Selector/>
 
             <div style="flex-grow: 1;" class="ms-4 mt-3">

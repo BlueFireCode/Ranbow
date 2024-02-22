@@ -1,0 +1,9 @@
+.purple-nav {
+    background-color:var(--bs-purple);
+}
+
+.default-content-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}

@@ -1,11 +1,15 @@
-FROM rust:1.76.0-slim-bullseye
+FROM rust:1.76.0-slim-bullseye as build
 
 RUN apt update -y && apt install -y pkg-config libssl-dev
 
-WORKDIR /app
+WORKDIR /src
 COPY . .
+WORKDIR /src/db-api
+RUN cargo build -r
 
+FROM rust:1.76.0-slim-bullseye as final
 EXPOSE 80
-WORKDIR /app/db-api
+WORKDIR /app
+COPY --from=build /src/target/release/db-api ./db-api
 
-CMD [ "cargo", "run", "-r" ]
+ENTRYPOINT ["./db-api"]

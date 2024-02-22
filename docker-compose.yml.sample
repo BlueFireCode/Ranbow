@@ -9,7 +9,7 @@ services:
     depends_on:
       - db-api
     volumes:
-      - ./Trunk.toml:/app/web-app/Trunk.toml
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
 
   db-api:
     image: julianusiv/ranbow_backend

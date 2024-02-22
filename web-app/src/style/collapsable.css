@@ -19,3 +19,10 @@
     --bs-text-opacity: 1;
     color: rgba(var(--bs-light-rgb),var(--bs-text-opacity)) !important;
 }
+
+.selector-collapsable-svg {
+    display: inline-block;
+    user-select: none;
+    vertical-align: text-bottom;
+    overflow: visible;
+}

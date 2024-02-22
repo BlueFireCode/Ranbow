@@ -1,6 +1,5 @@
 mod components;
 mod logic;
-mod environment;
 
 use components::operators::{OperatorView, Operators};
 use yew::prelude::*;
@@ -42,7 +41,7 @@ fn switch(routes: Route) -> Html {
         Route::Operators => html!{ <Operators/> },
         Route::Operator { id } => html!{ <OperatorView {id}/> },
         Route::Login => html!{ <Login/> },
-        Route::NotFound => html!{ <img src={"https://http.cat/404"}/> }
+        Route::NotFound => html!{ <img class="rounded mx-auto mt-5 d-block" src={"https://http.cat/404"}/> }
     }
 }
 
@@ -59,7 +58,7 @@ fn App() -> Html {
         <div>
             <header>
             <BrowserRouter>
-                <nav class="navbar navbar-expand-lg border-bottom bd-body-tertiary" style="background-color:var(--bs-purple)">
+                <nav class="navbar navbar-expand-lg border-bottom bd-body-tertiary purple-nav">
                     <div class="container-fluid">
                         <div class="navbar-brand">
                             <Link<Route> classes={"nav-link mt-1"} to={Route::Default}>
@@ -97,10 +96,10 @@ fn App() -> Html {
             <div class="container">
             { node }
             </div>
-            <footer class="footer border-top" style="text-align: center; padding: 3px; position: fixed; left: 0; bottom: 0; width: 100%; height: 3rem; background-color: var(--bs-body-bg);">
-                <p class="mx-5" style="display: inline;">{"©2024 "}<a href="https://github.com/BlueFireCode/ranbow">{"BlueFireCode"}</a></p>
-                <p class="mx-5" style="display: inline;">{"More up to date than the "}<a href="https://www.ubisoft.com/en-gb/game/rainbow-six/siege/game-info/operators">{"official website"}</a>{"!"}</p>
-                <p class="mx-5" style="display: inline;">{"Author: JulianusIV"}</p>
+            <footer class="footer border-top footer-bar">
+                <p class="mx-5 footer-entry">{"©2024 "}<a href="https://github.com/BlueFireCode/ranbow">{"BlueFireCode"}</a></p>
+                <p class="mx-5 footer-entry">{"More up to date than the "}<a href="https://www.ubisoft.com/en-gb/game/rainbow-six/siege/game-info/operators">{"official website"}</a>{"!"}</p>
+                <p class="mx-5 footer-entry">{"Author: JulianusIV"}</p>
             </footer>
         </div>
     }
