@@ -4,7 +4,6 @@
 }
 
 .weapon-display-panel {
-    display: table-cell;
     width: 290px;
 }
 
@@ -12,4 +11,20 @@
     width: 290px;
     text-align: center;
     font-size: calc(1.275rem + .3vw);
+}
+
+@media screen and (min-width:900px) {
+    .op-weapon-table-row {
+        display: table-row;
+    }
+
+    .op-weapon-table-cell {
+        display: table-cell;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .op-panel-divider {
+        width:320px;
+    }
 }

@@ -16,4 +16,4 @@ shared = { path = "../shared" }
 mongodb = "^2.8"
 futures = "^0.3"
 fuzzy-matcher = "*"
-reqwest = { version = "^0.11", features = ["json"] }
+reqwest = { version = "^0.11", default-features = false, features = [ "rustls-tls", "json"] }

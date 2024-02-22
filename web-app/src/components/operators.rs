@@ -169,12 +169,13 @@ pub fn operator_view(props: &Props) -> Html {
                 if let Some(state) = &*state {
                     if let Some(state) = state {
                         html! {
-                            <div style="display: table-row;">
+                            <div class="op-weapon-table-row">
                                 <h3 class="op-name-panel">
                                     <img src={state.icon_url.clone()} class="me-2" height="65px" width="65px"/>
                                     <p style="display: inline">{state.name.clone()}</p>
                                 </h3>
-                                <div style="display: table-row;">
+                                <hr class="op-panel-divider"/>
+                                <div class="op-weapon-table-row">
                                 {
                                     state.primaries.clone().into_iter().map(|primary| {
                                         html! {
@@ -183,7 +184,8 @@ pub fn operator_view(props: &Props) -> Html {
                                     }).collect::<Html>()
                                 }
                                 </div>
-                                <div style="display: table-row;">
+                                <hr class="op-panel-divider"/>
+                                <div class="op-weapon-table-row">
                                 {
                                     state.secondaries.clone().into_iter().map(|secondary| {
                                         html! {
@@ -192,11 +194,12 @@ pub fn operator_view(props: &Props) -> Html {
                                     }).collect::<Html>()
                                 }
                                 </div>
-                                <div style="display: table-row;">
+                                <hr class="op-panel-divider"/>
+                                <div class="op-weapon-table-row">
                                 {
                                     state.gadgets.clone().into_iter().map(|gadget| {
                                         html! {
-                                            <h4 style="display: table-cell;">
+                                            <h4 class="op-weapon-table-cell">
                                                 <img src={gadget.icon_url.clone()} height="100px" width="290px"/>
                                                 <p class="op-weapon-panel">{gadget.name.clone()}</p>
                                             </h4>
@@ -230,7 +233,7 @@ pub struct WeaponDisplayProps {
 pub fn weapon_display(props: &WeaponDisplayProps) -> Html {
     let weapon = props.weapon.clone();
     html! {
-        <div class="weapon-display-panel">
+        <div class="weapon-display-panel op-weapon-table-cell">
             <h4>
                 <button type="button" class="btn btn-link link-body-emphasis weapon-collapsable-button" data-bs-toggle="collapse" data-bs-target={format!("#{}", weapon.name.replace(" ", "_"))}>
                     <img src={weapon.icon_url.clone()} height="100px" width="290px"/>

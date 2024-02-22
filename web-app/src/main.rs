@@ -56,43 +56,43 @@ fn App() -> Html {
 
     html! {
         <div>
-            <header>
             <BrowserRouter>
-                <nav class="navbar navbar-expand-lg border-bottom bd-body-tertiary purple-nav">
-                    <div class="container-fluid">
-                        <div class="navbar-brand">
-                            <Link<Route> classes={"nav-link mt-1"} to={Route::Default}>
-                                <img class="mx-3 mb-1" src="/bluefire-d111e6a6dd18c618.png" heigth="50px" width="50px"/>
-                                {"Ranbow"}
-                            </Link<Route>>
-                        </div>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <Link<Route> classes={"nav-link"} to={Route::FullGame}>{"Full Game"}</Link<Route>>
-                                </li>
-                                <li class="nav-item">
-                                    <Link<Route> classes={"nav-link"} to={Route::TDM}>{"TDM"}</Link<Route>>
-                                </li>
-                                <li class="nav-item">
-                                    <Link<Route> classes={"nav-link"} to={Route::Team}>{"Team"}</Link<Route>>
-                                </li>
-                                <li class="nav-item">
-                                    <Link<Route> classes={"nav-link"} to={Route::Operators}>{"Operators"}</Link<Route>>
-                                </li>
-                            </ul>
-                            <div class="d-flex">
-                                <Link<Route> classes={"btn btn-outline-light"} to={Route::Login}>{"Login"}</Link<Route>>
+                <header>
+                    <nav class="navbar navbar-expand-lg border-bottom bd-body-tertiary purple-nav">
+                        <div class="container-fluid">
+                            <div class="navbar-brand">
+                                <Link<Route> classes={"nav-link mt-1"} to={Route::Default}>
+                                    <img class="mx-3 mb-1" src="/bluefire-d111e6a6dd18c618.png" heigth="50px" width="50px"/>
+                                    {"Ranbow"}
+                                </Link<Route>>
+                            </div>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <Link<Route> classes={"nav-link"} to={Route::FullGame}>{"Full Game"}</Link<Route>>
+                                    </li>
+                                    <li class="nav-item">
+                                        <Link<Route> classes={"nav-link"} to={Route::TDM}>{"TDM"}</Link<Route>>
+                                    </li>
+                                    <li class="nav-item">
+                                        <Link<Route> classes={"nav-link"} to={Route::Team}>{"Team"}</Link<Route>>
+                                    </li>
+                                    <li class="nav-item">
+                                        <Link<Route> classes={"nav-link"} to={Route::Operators}>{"Operators"}</Link<Route>>
+                                    </li>
+                                </ul>
+                                <div class="d-flex">
+                                    <Link<Route> classes={"btn btn-outline-light"} to={Route::Login}>{"Login"}</Link<Route>>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </nav>
+                    </nav>
+                </header>
                 <Switch<Route> render={switch}/>
             </BrowserRouter>
-            </header>
             <div class="container">
             { node }
             </div>

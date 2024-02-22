@@ -5,11 +5,13 @@ RUN apt update -y && apt install -y pkg-config libssl-dev
 WORKDIR /src
 COPY . .
 WORKDIR /src/db-api
-RUN cargo build -r
+RUN apt update -y && apt upgrade -y && apt install musl-tools -y
+RUN rustup target add x86_64-unknown-linux-musl
+RUN cargo build -r --target x86_64-unknown-linux-musl
 
-FROM rust:1.76.0-slim-bullseye as final
+FROM alpine as final
 EXPOSE 80
 WORKDIR /app
-COPY --from=build /src/target/release/db-api ./db-api
+COPY --from=build /src/target/x86_64-unknown-linux-musl//release/db-api ./db-api
 
 ENTRYPOINT ["./db-api"]
