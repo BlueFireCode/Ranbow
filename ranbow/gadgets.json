@@ -87,12 +87,12 @@
       "$oid": "6522f1ce0b482dfac36e2df3"
     },
     "name": "Impact EMP Grenade",
-    "icon_url": "https://cdn.discordapp.com/attachments/717500981461385236/1020796829585125426/unknown.png"
+    "icon_url": "https://julianusiv.de/images/ranbow/emp_nade.png"
   },
   {
     "_id": {
       "$oid": "6522f1e80b482dfac36e2df4"
     },
     "name": "Observation Blocker",
-    "icon_url": "https://cdn.discordapp.com/attachments/512370308976607250/1113588964587225208/image.png"
+    "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5toUEasFf4nw1vID6N8fpC/70f43a9ef7e83bbff5aaa9cdfab46c3c/r6s-observationblocker-gadget_v1.png"
   }]
