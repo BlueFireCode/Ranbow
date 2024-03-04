@@ -4,8 +4,6 @@ services:
   web-app:
     image: julianusiv/ranbow_frontend
     restart: unless-stopped
-    environment:
-      RANBOW_HOST_URL: "https://ranbow.sample.net"
     depends_on:
       - db-api
     volumes:
