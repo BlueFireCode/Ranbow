@@ -235,12 +235,12 @@ pub fn weapon_display(props: &WeaponDisplayProps) -> Html {
     html! {
         <div class="weapon-display-panel op-weapon-table-cell">
             <h4>
-                <button type="button" class="btn btn-link link-body-emphasis weapon-collapsable-button" data-bs-toggle="collapse" data-bs-target={format!("#{}", weapon.name.replace(" ", "_"))}>
+                <button type="button" class="btn btn-link link-body-emphasis weapon-collapsable-button" data-bs-toggle="collapse" data-bs-target={format!("#weapon_{}", weapon.name.replace(" ", "_").replace(".", "_"))}>
                     <img src={weapon.icon_url.clone()} height="100px" width="290px"/>
                     {weapon.name.clone()}
                 </button>
             </h4>
-            <div class="collapse border border-light rounded p-2 mx-2" id={weapon.name.replace(" ", "_")}>
+            <div class="collapse border border-light rounded p-2 mx-2" id={format!("weapon_{}", weapon.name.replace(" ", "_").replace(".", "_"))}>
             {
                 if weapon.attachment_options.sight ||
                     weapon.attachment_options.muzzle ||
