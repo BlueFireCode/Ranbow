@@ -19,7 +19,17 @@ pub fn selector() -> Html {
         use_effect_with((), move |_| {
             let state = state.clone();
             wasm_bindgen_futures::spawn_local(async move {
-                let fetched_state = fetch_operator_displays().await;
+                let mut fetched_state = fetch_operator_displays().await;
+                fetched_state.sort_by(|a, b| b.attacker.cmp(&a.attacker));
+
+                let local_storage: Vec<OperatorDisplay> = LocalStorage::get("ranbow_selected_operators").unwrap_or(Vec::<OperatorDisplay>::new());
+                for op in local_storage {
+                    if let Some(selected) = op.selected {
+                        let index = fetched_state.iter().position(|e| e.id == op.id).unwrap();
+                        fetched_state[index].selected = Some(selected);
+                    }
+                }
+
                 let list = fetched_state.clone();
                 state.set(Some(fetched_state));
                 let _ = <LocalStorage as Storage>::set("ranbow_selected_operators", list);
@@ -100,7 +110,7 @@ pub fn operator_check_box(props: &Props) -> Html {
     html!{
         <tr style="min-height: 60px;">
             <td class="form-check-label" style="background-color: transparent;">
-                <input class="form-check-input custom-checkbox-input" type="checkbox" id={String::from("operator_check_") + props.operator_display.id.to_string().as_str()} checked={true} {onchange}/>
+                <input class="form-check-input custom-checkbox-input" type="checkbox" id={String::from("operator_check_") + props.operator_display.id.to_string().as_str()} checked={props.operator_display.selected.unwrap_or(true)} {onchange}/>
                 <label class="custom-checkbox-content" for={String::from("operator_check_") + props.operator_display.id.to_string().as_str()}>
                     <img height="50" width="50" src={props.operator_display.icon_url.clone()}/>
                     <span width="100" class="mt-2">{props.operator_display.name.clone()}</span>
