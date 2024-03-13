@@ -26,7 +26,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -103,7 +103,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -112,7 +112,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -128,7 +128,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -137,7 +137,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -220,7 +220,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -236,7 +236,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 1,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -246,7 +246,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -323,7 +323,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -332,7 +332,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -446,14 +446,14 @@
           "laser": true
         },
         "attachments": {
-          "sight": 5,
+          "sight": 3,
           "muzzle": [
             "None",
             "Suppressor",
             "Muzzle Brake"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -472,7 +472,7 @@
           "sight": 1,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip"
           ]
         }
@@ -627,7 +627,7 @@
             "Muzzle Brake"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -726,7 +726,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -735,7 +735,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -751,7 +751,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -760,7 +760,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -913,7 +913,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -944,7 +944,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -960,7 +960,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 1,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -969,7 +969,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1053,7 +1053,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 5,
+          "sight": 3,
           "muzzle": [
             "None",
             "Suppressor",
@@ -1129,7 +1129,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -1139,7 +1139,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1155,14 +1155,14 @@
           "laser": true
         },
         "attachments": {
-          "sight": 5,
+          "sight": 3,
           "muzzle": [
             "None",
             "Suppressor",
             "Muzzle Brake"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1224,7 +1224,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Muzzle Brake",
@@ -1232,7 +1232,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1248,7 +1248,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -1258,7 +1258,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1353,7 +1353,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -1362,7 +1362,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1442,7 +1442,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -1451,7 +1451,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1477,7 +1477,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1565,7 +1565,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -1574,7 +1574,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1647,7 +1647,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -1656,7 +1656,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1672,7 +1672,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -1681,7 +1681,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1739,14 +1739,14 @@
           "laser": true
         },
         "attachments": {
-          "sight": 5,
+          "sight": 3,
           "muzzle": [
             "None",
             "Suppressor",
             "Muzzle Brake"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1762,10 +1762,10 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1786,7 +1786,7 @@
           "sight": 1,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1860,7 +1860,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -1869,7 +1869,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1885,14 +1885,14 @@
           "laser": true
         },
         "attachments": {
-          "sight": 5,
+          "sight": 3,
           "muzzle": [
             "None",
             "Suppressor",
             "Muzzle Brake"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -1911,7 +1911,7 @@
           "sight": 1,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip"
           ]
         }
@@ -1987,7 +1987,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -1997,7 +1997,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2013,7 +2013,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -2022,7 +2022,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2044,7 +2044,7 @@
             "Suppressor"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2125,7 +2125,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -2135,7 +2135,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2151,14 +2151,14 @@
           "laser": true
         },
         "attachments": {
-          "sight": 5,
+          "sight": 3,
           "muzzle": [
             "None",
             "Suppressor",
             "Muzzle Brake"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2220,7 +2220,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -2241,7 +2241,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -2250,7 +2250,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2323,7 +2323,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -2333,7 +2333,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2349,7 +2349,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Muzzle Brake",
@@ -2357,7 +2357,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2536,7 +2536,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -2545,7 +2545,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2591,7 +2591,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2755,7 +2755,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 1,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -2764,7 +2764,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2790,7 +2790,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2872,7 +2872,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -2945,7 +2945,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -2955,7 +2955,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3046,7 +3046,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -3055,7 +3055,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3071,14 +3071,14 @@
           "laser": true
         },
         "attachments": {
-          "sight": 5,
+          "sight": 3,
           "muzzle": [
             "None",
             "Suppressor",
             "Muzzle Brake"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3136,7 +3136,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -3145,7 +3145,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3171,7 +3171,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3233,7 +3233,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -3243,7 +3243,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3259,14 +3259,14 @@
           "laser": true
         },
         "attachments": {
-          "sight": 5,
+          "sight": 3,
           "muzzle": [
             "None",
             "Suppressor",
             "Muzzle Brake"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3328,7 +3328,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -3338,7 +3338,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3357,7 +3357,7 @@
           "sight": 1,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip"
           ]
         }
@@ -3401,8 +3401,8 @@
     ],
     "gadgets": [
       {
-        "name": "Breach Charge",
-        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1OgTMhyF1FBsSAo4njk26m/9881001e9db03a4806b2eea6007e4a1a/Breach_Charge.png"
+        "name": "Hard Breach Charge",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3OvnVPWY1UyrDE913kU0a1/eae4b2a1584234ea2ff4ad6481239f3b/SecondaryBreacher.png"
       },
       {
         "name": "Claymore",
@@ -3443,7 +3443,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3459,14 +3459,14 @@
           "laser": true
         },
         "attachments": {
-          "sight": 5,
+          "sight": 3,
           "muzzle": [
             "None",
             "Suppressor",
             "Muzzle Brake"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3539,7 +3539,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -3549,7 +3549,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3565,7 +3565,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
@@ -3574,7 +3574,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3647,7 +3647,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -3715,7 +3715,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3820,7 +3820,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3882,7 +3882,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -3989,7 +3989,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -3999,7 +3999,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -4090,7 +4090,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -4131,7 +4131,7 @@
           "sight": 1,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip"
           ]
         }
@@ -4218,7 +4218,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -4228,7 +4228,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -4269,7 +4269,7 @@
           "sight": 1,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip"
           ]
         }
@@ -4355,7 +4355,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -4377,7 +4377,7 @@
             "Suppressor"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -4469,7 +4469,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -4479,7 +4479,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -4592,7 +4592,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -4754,7 +4754,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -4852,7 +4852,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5004,10 +5004,10 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5130,7 +5130,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5228,7 +5228,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5310,7 +5310,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5333,7 +5333,7 @@
             "Suppressor"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5405,7 +5405,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5421,10 +5421,10 @@
           "laser": true
         },
         "attachments": {
-          "sight": 4,
+          "sight": 2,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5463,7 +5463,7 @@
           "sight": 1,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5509,7 +5509,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip"
           ]
         }
@@ -5524,10 +5524,10 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5614,7 +5614,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5630,10 +5630,10 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5814,7 +5814,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5830,13 +5830,13 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5919,7 +5919,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -5935,7 +5935,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -5945,7 +5945,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6018,7 +6018,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -6028,7 +6028,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6068,7 +6068,7 @@
           "sight": 1,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6119,7 +6119,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6135,13 +6135,13 @@
           "laser": true
         },
         "attachments": {
-          "sight": 3,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6317,7 +6317,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6405,7 +6405,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 1,
+          "sight": 2,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -6415,7 +6415,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6498,7 +6498,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6521,7 +6521,7 @@
             "Muzzle Brake"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6589,7 +6589,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6688,7 +6688,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -6698,7 +6698,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6799,7 +6799,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6818,7 +6818,7 @@
           "sight": 2,
           "muzzle": [],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6925,7 +6925,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -6990,7 +6990,7 @@
             "Suppressor"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -7073,7 +7073,7 @@
             "Flash Hider"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -7089,14 +7089,14 @@
           "laser": true
         },
         "attachments": {
-          "sight": 1,
+          "sight": 2,
           "muzzle": [
             "None",
             "Suppressor",
             "Muzzle Brake"
           ],
           "grip": [
-            "None",
+            "Horizontal Grip",
             "Vertical Grip",
             "Angled Grip"
           ]
@@ -7134,4 +7134,78 @@
         "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2TsFLmb2O6LRZpbxzkZDck/c9146913388a9567500b704c95600621/Proximity_alarm.png"
       }
     ]
-  }]
+  },
+  {
+    "_id": {
+      "$oid": "65f0ff5f1fb746eef69e4064"
+    },
+    "name": "Deimos",
+    "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/18uYWtYnEjmMQBTTdkIfWF/2bb4305ef6b7826f1c8ae3ea88ef826a/r6s-operators-badge-deimos.png",
+    "image_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/30I7qa77OwH9EWPvcHYBbH/45c27a7d2d3df007b0138f2c6ab2b94a/r6s-operator-deimos.png",
+    "attacker": true,
+    "primaries": [
+      {
+        "name": "AK-74M",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1j5HiQP8aFphTe65fqDdg0/23eecb5c603c5ba9f59fc6cbc5e4a531/AK-74M.png",
+        "attachment_options": {
+          "sight": true,
+          "muzzle": true,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 2,
+          "muzzle": [
+            "None",
+            "Suppressor",
+            "Muzzle Brake",
+            "Compensator",
+            "Flash Hider"
+          ],
+          "grip": []
+        }
+      },
+      {
+        "name": "M590A1",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2zRHmgqENNiZqXQxC9Rsbj/e6542407c642f9b7c5a4546afb6db30a/M590A1.png",
+        "attachment_options": {
+          "sight": true,
+          "muzzle": false,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 1,
+          "muzzle": [],
+          "grip": []
+        }
+      }
+    ],
+    "secondaries": [
+      {
+        "name": ".44 Vendetta",
+        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2kx8YFXaz4l9A3iJctZ33h/30f25aff1e25daf0dff88d258423adcf/44VENDETTA.png",
+        "attachment_options": {
+          "sight": false,
+          "muzzle": false,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 0,
+          "muzzle": [],
+          "grip": []
+        }
+      }
+    ],
+    "gadgets": [
+      {
+        "name": "Frag Grenade",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4GZsPHbm9H0k5EWz7TMkwO/33b9007bc6ee03dab15cfa15eb69e096/Frag_Grenade.png"
+      },
+      {
+        "name": "Hard Breach Charge",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3OvnVPWY1UyrDE913kU0a1/eae4b2a1584234ea2ff4ad6481239f3b/SecondaryBreacher.png"
+      }
+    ]
+}]
