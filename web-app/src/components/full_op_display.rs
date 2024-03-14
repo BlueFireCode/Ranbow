@@ -5,7 +5,8 @@ use crate::logic::helpers::u8_to_sight_name;
 
 #[derive(Properties, PartialEq)]
 pub struct FullDisplayProps {
-    pub operator: Option<Operator>
+    pub operator: Option<Operator>,
+    pub tdm: bool
 }
 
 #[function_component(FullOpDisplay)]
@@ -31,10 +32,12 @@ pub fn full_op_display(props: &FullDisplayProps) -> Html {
                         <p class="op-weapon-panel">{selected_secondary.name.clone()}</p>
                     </h4>
                     <WeaponAttachmentDisplay weapon={Some(selected_secondary)}/>
-                    <h4>
-                        <img src={selected_gadget.icon_url.clone()} height="100px" width="290px"/>
-                        <p class="op-weapon-panel">{selected_gadget.name.clone()}</p>
-                    </h4>
+                    if !props.tdm {
+                        <h4>
+                            <img src={selected_gadget.icon_url.clone()} height="100px" width="290px"/>
+                            <p class="op-weapon-panel">{selected_gadget.name.clone()}</p>
+                        </h4>
+                    }
                 </div>
             }
         },

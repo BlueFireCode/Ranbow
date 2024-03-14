@@ -17,5 +17,6 @@ pub struct Operator {
     pub secondaries: Vec<Weapon>,
     pub selected_secondary: Option<Weapon>,
     pub gadgets: Vec<Gadget>,
-    pub selected_gadget: Option<Gadget>
+    pub selected_gadget: Option<Gadget>,
+    pub tdm: bool
 }

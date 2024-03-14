@@ -20,10 +20,10 @@ pub fn default() -> Html {
     let on_atk = Callback::from(move |_| {
         let state = atk_state.clone();
         wasm_bindgen_futures::spawn_local(async move {
-            let id = randomizer::get_random_id(true);
+            let id = randomizer::get_random_id(false, Some(true));
             if let Some(id) = id {
                 let operator = fetch_operator(&id).await;
-                state.set(randomizer::randomize_operator(operator));
+                state.set(randomizer::randomize_operator(false, operator));
             } else {
                 log::error!("Failed to randomly select operator.");
             }
@@ -34,10 +34,10 @@ pub fn default() -> Html {
     let on_def = Callback::from(move |_| {
         let state = def_state.clone();
         wasm_bindgen_futures::spawn_local(async move {
-            let id = randomizer::get_random_id(false);
+            let id = randomizer::get_random_id(false, Some(false));
             if let Some(id) = id {
                 let operator = fetch_operator(&id).await;
-                state.set(randomizer::randomize_operator(operator));
+                state.set(randomizer::randomize_operator(false, operator));
             } else {
                 log::error!("Failed to randomly select operator.");
             }
@@ -67,9 +67,9 @@ pub fn default() -> Html {
                 <div>
                     {
                         if let Some(state) = &*state {
-                            html! { <FullOpDisplay operator={Some(state.clone())}/> }
+                            html! { <FullOpDisplay tdm={false} operator={Some(state.clone())}/> }
                         } else {
-                            html! { <FullOpDisplay operator={None}/> }
+                            html! { <FullOpDisplay tdm={false} operator={None}/> }
                         }
                     }
                 </div>

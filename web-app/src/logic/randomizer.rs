@@ -2,9 +2,13 @@ use gloo_storage::{LocalStorage, Storage};
 use rand::{seq::SliceRandom, Rng};
 use shared::model::{operator::Operator, operator_display::OperatorDisplay, weapon::Weapon};
 
-pub fn get_random_id(attacker: bool) -> Option<String> {
+pub fn get_random_id(tdm: bool, attacker: Option<bool>) -> Option<String> {
     let val: Vec<OperatorDisplay> = LocalStorage::get("ranbow_selected_operators").unwrap_or(Vec::<OperatorDisplay>::new());
-    let selected: Vec<OperatorDisplay> = val.into_iter().filter(|e: &OperatorDisplay| e.attacker == attacker && e.selected.unwrap_or(true)).collect();
+    let selected: Vec<OperatorDisplay> = val.into_iter().filter(|e: &OperatorDisplay|
+        e.selected.unwrap_or(true) &&
+        (if let Some(atk) = attacker { e.attacker == atk } else { true }) &&
+        (if tdm { e.tdm } else { true })
+    ).collect();
     let selected = selected.choose(&mut rand::thread_rng());
     if let Some(selected) = selected {
         Some(selected.id.to_string())
@@ -13,17 +17,27 @@ pub fn get_random_id(attacker: bool) -> Option<String> {
     }
 }
 
-pub fn randomize_operator(op: Operator) -> Option<Operator> {
+pub fn randomize_operator(tdm: bool, op: Operator) -> Option<Operator> {
     let mut op = op.clone();
     let mut rng = rand::thread_rng();
 
-    let selected_primary = op.primaries.choose(&mut rng);
+    let selected_primary = op.primaries
+        .clone()
+        .into_iter()
+        .filter(|e| if tdm { e.tdm } else { true })
+        .collect::<Vec<Weapon>>();
+    let selected_primary = selected_primary.choose(&mut rng);
     op.selected_primary = match selected_primary {
         Some(prim) => randomize_weapon(prim.clone()),
         None => return None
     };
 
-    let selected_secondary = op.secondaries.choose(&mut rng);
+    let selected_secondary = op.secondaries
+        .clone()
+        .into_iter()
+        .filter(|e| if tdm { e.tdm } else { true })
+        .collect::<Vec<Weapon>>();
+    let selected_secondary = selected_secondary.choose(&mut rng);
     op.selected_secondary = match selected_secondary {
         Some(sec) => randomize_weapon(sec.clone()),
         None => return None

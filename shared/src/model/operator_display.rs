@@ -8,5 +8,6 @@ pub struct OperatorDisplay {
     pub name: String,
     pub icon_url: String,
     pub selected: Option<bool>,
-    pub attacker: bool
+    pub attacker: bool,
+    pub tdm: bool
 }

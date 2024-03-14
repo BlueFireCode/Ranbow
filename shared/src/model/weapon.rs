@@ -9,4 +9,5 @@ pub struct Weapon {
     pub icon_url: String,
     pub attachment_options: AttachmentOptions,
     pub attachments: Attachments,
+    pub tdm: bool
 }
