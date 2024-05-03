@@ -2969,8 +2969,8 @@
     ],
     "gadgets": [
       {
-        "name": "Stun Grenade",
-        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3XnK8s1iQJQu5cfr6UyQfK/429480b96d6d6d6b830c32c75d2608f5/Stun_Grenade.png"
+        "name": "Impact EMP Grenade",
+        "icon_url": "https://julianusiv.de/images/ranbow/emp_nade.png"
       },
       {
         "name": "Smoke Grenade",
@@ -5528,8 +5528,8 @@
         "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/gZuOXvuTu2i8hQX0B6auy/259f379a6283bae618443d722a896f1a/Bulletproof_camera.png"
       },
       {
-        "name": "Impact Grenade",
-        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iJK9B1Vr3PDO3rGftU00l/3a02e940b440c30929edf22c49870f65/impact-grenade__1_.png"
+        "name": "Observation Blocker",
+        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5toUEasFf4nw1vID6N8fpC/70f43a9ef7e83bbff5aaa9cdfab46c3c/r6s-observationblocker-gadget_v1.png"
       }
     ],
     "tdm": true
