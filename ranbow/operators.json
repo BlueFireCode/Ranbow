@@ -1388,22 +1388,6 @@
           "grip": []
         },
         "tdm": true
-      },
-      {
-        "name": "GONNE-6",
-        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/23AlSVw8MwI1y3ZakEfqgW/c4561ae6e8da8db2627a146b8b55ee6c/GONNE-6_HUD_Icon__1_.png",
-        "attachment_options": {
-          "sight": false,
-          "muzzle": false,
-          "grip": false,
-          "laser": false
-        },
-        "attachments": {
-          "sight": 0,
-          "muzzle": [],
-          "grip": []
-        },
-        "tdm": true
       }
     ],
     "gadgets": [
@@ -5495,7 +5479,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 1,
+          "sight": 2,
           "muzzle": [],
           "grip": [
             "Horizontal Grip",
@@ -5880,8 +5864,8 @@
         "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7igaibxuCcSpWDkZensEJS/6d30514b70a4c8b535bb1c113f9cfce0/barbed-wire__1_.png"
       },
       {
-        "name": "Observation Blocker",
-        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5toUEasFf4nw1vID6N8fpC/70f43a9ef7e83bbff5aaa9cdfab46c3c/r6s-observationblocker-gadget_v1.png"
+        "name": "Impact Grenades",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iJK9B1Vr3PDO3rGftU00l/3a02e940b440c30929edf22c49870f65/impact-grenade__1_.png"
       }
     ],
     "tdm": true
@@ -6773,7 +6757,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -6963,7 +6947,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -7014,6 +6998,22 @@
             "Suppressor",
             "Muzzle Brake"
           ],
+          "grip": []
+        },
+        "tdm": true
+      },
+      {
+        "name": "ITA12S",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5G4DroaSdqHzJWCe7qqbHZ/5dd2e03f853182c78a1e7fcbc642f0cf/ITA12S.png",
+        "attachment_options": {
+          "sight": true,
+          "muzzle": false,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 1,
+          "muzzle": [],
           "grip": []
         },
         "tdm": true
