@@ -1412,6 +1412,24 @@
     "attacker": true,
     "primaries": [
       {
+        "name": "H.U.L.L ADAPTABLE SHIELD",
+        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7hk4QZge2W9nWQzzGorbu8/b1a5f7a9ca6efe5be337a70ab1f50a45/r6s-operator-ability-blackbeard.png",
+        "attachment_options": {
+          "sight": false,
+          "muzzle": false,
+          "grip": false,
+          "laser": false
+        },
+        "attachments": {
+          "sight": 0,
+          "muzzle": [],
+          "grip": []
+        },
+        "tdm": false
+      }
+    ],
+    "secondaries": [
+      {
         "name": "MK17 CQB",
         "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4LytczDQmu0M63gO2WtCCm/331ef3b1938352ae71d7c0bd23de3596/Mk17_CQB.png",
         "attachment_options": {
@@ -1463,36 +1481,10 @@
         "tdm": true
       }
     ],
-    "secondaries": [
-      {
-        "name": "D-50",
-        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6mMQRDsrComRFa7bC6cNkG/8cd17e545e3d28dcc11a040d000cfa16/D-50.png",
-        "attachment_options": {
-          "sight": false,
-          "muzzle": true,
-          "grip": false,
-          "laser": true
-        },
-        "attachments": {
-          "sight": 0,
-          "muzzle": [
-            "None",
-            "Suppressor",
-            "Muzzle Brake"
-          ],
-          "grip": []
-        },
-        "tdm": true
-      }
-    ],
     "gadgets": [
       {
         "name": "Claymore",
         "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4T4H5EJgUxorucGVtU2pkm/74fef324b89c220ce6426e8097f915b9/Claymore.png"
-      },
-      {
-        "name": "Stun Grenade",
-        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3XnK8s1iQJQu5cfr6UyQfK/429480b96d6d6d6b830c32c75d2608f5/Stun_Grenade.png"
       },
       {
         "name": "Frag Grenade",
@@ -7227,6 +7219,22 @@
             "Suppressor",
             "Muzzle Brake"
           ],
+          "grip": []
+        },
+        "tdm": true
+      },
+      {
+        "name": "ITA12S",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5G4DroaSdqHzJWCe7qqbHZ/5dd2e03f853182c78a1e7fcbc642f0cf/ITA12S.png",
+        "attachment_options": {
+          "sight": true,
+          "muzzle": false,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 1,
+          "muzzle": [],
           "grip": []
         },
         "tdm": true
