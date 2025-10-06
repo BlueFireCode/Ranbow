@@ -59,6 +59,31 @@
           ]
         },
         "tdm": true
+      },
+      {
+        "name": "SR-25",
+        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3H3sICdj6BK8LhtQPRd2aJ/26826ebba73e0e5fd503256d069f3256/SR-25.png",
+        "attachment_options": {
+          "sight": true,
+          "muzzle": true,
+          "grip": true,
+          "laser": true
+        },
+        "attachments":
+        {
+          "sight": 3,
+          "muzzle": [
+            "None",
+            "Muzzle Brake",
+            "Suppressor"
+          ],
+          "grip": [
+            "Horizontal Grip",
+            "Vertical Grip",
+            "Angled Grip"
+          ]
+        },
+        "tdm": true
       }
     ],
     "secondaries": [
@@ -180,6 +205,29 @@
           "sight": 1,
           "muzzle": [],
           "grip": []
+        },
+        "tdm": true
+      },
+      {
+        "name": "TCSG12",
+        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2NDbY7BTBJ9R09LUilTlRf/3728337cd3ba14ed6ab9de0c22e879af/TCSG12.png",
+        "attachment_options": {
+          "sight": true,
+          "muzzle": true,
+          "grip": true,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 2,
+          "muzzle": [
+            "None",
+            "Suppressor"
+          ],
+          "grip": [
+            "Horizontal Grip",
+            "Vertical Grip",
+            "Angled Grip"
+          ]
         },
         "tdm": true
       }
@@ -321,6 +369,28 @@
             "None",
             "Suppressor",
             "Muzzle Brake"
+          ],
+          "grip": []
+        },
+        "tdm": true
+      },
+      {
+        "name": "Reaper MK2",
+        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5RC060K72yG2OXMq43lgrv/83df616f6d4a2dde6293cc97449159eb/reaper-mk2.png",
+        "attachment_options": {
+          "sight": false,
+          "muzzle": true,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 0,
+          "muzzle": [
+            "None",
+            "Flash Hider",
+            "Compensator",
+            "Muzzle Brake",
+            "Suppressor"
           ],
           "grip": []
         },
@@ -1918,6 +1988,28 @@
             "None",
             "Suppressor",
             "Muzzle Brake"
+          ],
+          "grip": []
+        },
+        "tdm": true
+      },
+      {
+        "name": "Reaper MK2",
+        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5RC060K72yG2OXMq43lgrv/83df616f6d4a2dde6293cc97449159eb/reaper-mk2.png",
+        "attachment_options": {
+          "sight": false,
+          "muzzle": true,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 0,
+          "muzzle": [
+            "None",
+            "Flash Hider",
+            "Compensator",
+            "Muzzle Brake",
+            "Suppressor"
           ],
           "grip": []
         },
@@ -4272,7 +4364,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -4453,6 +4545,28 @@
           "grip": []
         },
         "tdm": true
+      },
+      {
+        "name": "Reaper MK2",
+        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5RC060K72yG2OXMq43lgrv/83df616f6d4a2dde6293cc97449159eb/reaper-mk2.png",
+        "attachment_options": {
+          "sight": false,
+          "muzzle": true,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 0,
+          "muzzle": [
+            "None",
+            "Flash Hider",
+            "Compensator",
+            "Muzzle Brake",
+            "Suppressor"
+          ],
+          "grip": []
+        },
+        "tdm": true
       }
     ],
     "gadgets": [
@@ -4490,7 +4604,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -4517,7 +4631,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -4635,7 +4749,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -4662,7 +4776,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -4731,6 +4845,28 @@
           "grip": []
         },
         "tdm": true
+      },
+      {
+        "name": "Reaper MK2",
+        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5RC060K72yG2OXMq43lgrv/83df616f6d4a2dde6293cc97449159eb/reaper-mk2.png",
+        "attachment_options": {
+          "sight": false,
+          "muzzle": true,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 0,
+          "muzzle": [
+            "None",
+            "Flash Hider",
+            "Compensator",
+            "Muzzle Brake",
+            "Suppressor"
+          ],
+          "grip": []
+        },
+        "tdm": true
       }
     ],
     "gadgets": [
@@ -4743,8 +4879,8 @@
         "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iJK9B1Vr3PDO3rGftU00l/3a02e940b440c30929edf22c49870f65/impact-grenade__1_.png"
       },
       {
-        "name": "Observation Blocker",
-        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5toUEasFf4nw1vID6N8fpC/70f43a9ef7e83bbff5aaa9cdfab46c3c/r6s-observationblocker-gadget_v1.png"
+        "name": "Nitro Cell",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4pBSTw9U6l9GRnT12G6Xln/e0991bc03b48d217f510af8b611c8828/Nitro_Cell.png"
       }
     ],
     "tdm": true
@@ -4898,7 +5034,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -5186,7 +5322,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -5459,7 +5595,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [],
           "grip": [
             "Horizontal Grip",
@@ -5719,22 +5855,6 @@
             "Suppressor",
             "Muzzle Brake"
           ],
-          "grip": []
-        },
-        "tdm": true
-      },
-      {
-        "name": "SUPER SHORTY",
-        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7Dq8LDmIxAveRqXM17orUW/cbd96b47cd8ca74a7827b16ef73fe7cf/r6-operator-weapon-sa-supershorty.png",
-        "attachment_options": {
-          "sight": true,
-          "muzzle": false,
-          "grip": false,
-          "laser": true
-        },
-        "attachments": {
-          "sight": 1,
-          "muzzle": [],
           "grip": []
         },
         "tdm": true
@@ -6271,10 +6391,6 @@
       {
         "name": "Impact Grenade",
         "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iJK9B1Vr3PDO3rGftU00l/3a02e940b440c30929edf22c49870f65/impact-grenade__1_.png"
-      },
-      {
-        "name": "Deployable Shield",
-        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/W0WE0X2VQlxwWIAFCJ6Jm/523650a39de5a23dd9520d7299c9e25a/Deployable_Shield.png"
       }
     ],
     "tdm": false
@@ -6621,7 +6737,7 @@
           "laser": true
         },
         "attachments": {
-          "sight": 2,
+          "sight": 1,
           "muzzle": [
             "None",
             "Extended Barrel",
@@ -6795,6 +6911,22 @@
           "grip": []
         },
         "tdm": true
+      },
+      {
+        "name": "SUPER SHORTY",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7Dq8LDmIxAveRqXM17orUW/cbd96b47cd8ca74a7827b16ef73fe7cf/r6-operator-weapon-sa-supershorty.png",
+        "attachment_options": {
+          "sight": true,
+          "muzzle": false,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 1,
+          "muzzle": [],
+          "grip": []
+        },
+        "tdm": true
       }
     ],
     "gadgets": [
@@ -6894,6 +7026,28 @@
             "None",
             "Suppressor",
             "Muzzle Brake"
+          ],
+          "grip": []
+        },
+        "tdm": true
+      },
+      {
+        "name": "Reaper MK2",
+        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5RC060K72yG2OXMq43lgrv/83df616f6d4a2dde6293cc97449159eb/reaper-mk2.png",
+        "attachment_options": {
+          "sight": false,
+          "muzzle": true,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 0,
+          "muzzle": [
+            "None",
+            "Flash Hider",
+            "Compensator",
+            "Muzzle Brake",
+            "Suppressor"
           ],
           "grip": []
         },
@@ -7585,22 +7739,6 @@
     ],
     "secondaries": [
       {
-        "name": "Bailiff 410",
-        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/N8FLbo4fsNyBe8msKgRhT/8f403dc0b58087bcafab786dd95ba33f/Bailiff_410.png",
-        "attachment_options": {
-          "sight": false,
-          "muzzle": false,
-          "grip": false,
-          "laser": true
-        },
-        "attachments": {
-          "sight": 0,
-          "muzzle": [],
-          "grip": []
-        },
-        "tdm": true
-      },
-      {
         "name": "5.7 USG",
         "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/tkYcSAJSe5yGkeUhzZqBO/e81feb86df4a7eb6951052bec26b6ed7/5.7_USG.png",
         "attachment_options": {
@@ -7962,16 +8100,149 @@
           "grip": []
         },
         "tdm": true
+      },
+      {
+        "name": "GSH-18",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5s5Q33j3MNcXf9lwfxfd7m/4eb3a6af1d431481b6ddcec44fbc7602/GSh-18.png",
+        "attachment_options": {
+          "sight": false,
+          "muzzle": true,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 0,
+          "muzzle": [
+            "None",
+            "Suppressor",
+            "Muzzle Brake"
+          ],
+          "grip": []
+        },
+        "tdm": true
       }
     ],
     "gadgets": [
       {
-        "name": "Frag Grenade",
-        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4GZsPHbm9H0k5EWz7TMkwO/33b9007bc6ee03dab15cfa15eb69e096/Frag_Grenade.png"
+        "name": "Smoke Grenade",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3LaxoSLC49T5vgKnUAlTLT/c47c4636845a04478432c48be8c29aee/Smoke_Grenade.png"
       },
       {
-        "name": "Hard Breach Charge",
-        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3OvnVPWY1UyrDE913kU0a1/eae4b2a1584234ea2ff4ad6481239f3b/SecondaryBreacher.png"
+        "name": "Breach Charge",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1OgTMhyF1FBsSAo4njk26m/9881001e9db03a4806b2eea6007e4a1a/Breach_Charge.png"
+      }
+    ],
+    "tdm": true
+  },
+  {
+    "_id": {
+      "$oid": "68e30a07efde01e48741f8b6"
+    },
+    "name": "Denari",
+    "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/17XNHqqrkLQ7lYFqciEwmP/21d50fb6c296d26a47f8dd84dd19298b/r6s-operators-badge-denari.png",
+    "image_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2tXE8ZM09IZLZNqb3xWzeC/4c96e9e2c07fe43811c6c5dcfd8256d4/r6s-operator-denari__3_.png",
+    "attacker": false,
+    "primaries": [
+      {
+        "name": "SCORPION EVO 3 A1",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6OdwaLWxcnFvhlVwWbP2Du/4f7e94bdb6d34d5c0aa7b7b147b4092e/Scorpion_EVO_3_A1.png",
+        "attachment_options": {
+          "sight": true,
+          "muzzle": true,
+          "grip": true,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 1,
+          "muzzle": [
+            "None",
+            "Suppressor",
+            "Muzzle Brake",
+            "Compensator",
+            "Flash Hider"
+          ],
+          "grip": [
+            "Horizontal Grip",
+            "Vertical Grip",
+            "Angled Grip"
+          ]
+        },
+        "tdm": true
+      },
+      {
+        "name": "FMG-9",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/0oneJNsBR06QjuowxwtHG/bd3b391c6eec2bd615f2ed83197a13ac/FMG-9.png",
+        "attachment_options": {
+          "sight": true,
+          "muzzle": true,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 1,
+          "muzzle": [
+            "None",
+            "Extended Barrel",
+            "Suppressor",
+            "Muzzle Brake",
+            "Compensator",
+            "Flash Hider"
+          ],
+          "grip": []
+        },
+        "tdm": true
+      }
+    ],
+    "secondaries": [
+      {
+        "name": "P226 MK 25",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/RTQvPQcywlRwUS1FjIKCX/6fc72fee2191c2e723276bc10ae4114e/P226_Mk_25.png",
+        "attachment_options": {
+          "sight": false,
+          "muzzle": true,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 0,
+          "muzzle": [
+            "None",
+            "Suppressor",
+            "Muzzle Brake"
+          ],
+          "grip": []
+        },
+        "tdm": true
+      },
+      {
+        "name": "Glaive-12",
+        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1vhycVQvB7uCsUpVE2jAw1/ed60286111e0049a3f312a81e828476f/glaive-12.png",
+        "attachment_options": {
+          "sight": true,
+          "muzzle": false,
+          "grip": true,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 1,
+          "muzzle": [],
+          "grip": [
+            "Angled Grip",
+            "Horizontal Grip",
+            "Vertical Grip"
+          ]
+        },
+        "tdm": true
+      }
+    ],
+    "gadgets": [
+      {
+        "name": "Deployable Shield",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/W0WE0X2VQlxwWIAFCJ6Jm/523650a39de5a23dd9520d7299c9e25a/Deployable_Shield.png"
+      },
+      {
+        "name": "Observation Blocker",
+        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5toUEasFf4nw1vID6N8fpC/70f43a9ef7e83bbff5aaa9cdfab46c3c/r6s-observationblocker-gadget_v1.png"
       }
     ],
     "tdm": true
