@@ -5206,6 +5206,26 @@
           "grip": []
         },
         "tdm": true
+      },
+      {
+        "name": "P-10C",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2l4qwB50zSFhFZVYRLNwqg/20df8114f69f96f2adc54779ccc5bbaa/P-10C.png",
+        "attachment_options": {
+          "sight": false,
+          "muzzle": true,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 0,
+          "muzzle": [
+            "None",
+            "Suppressor",
+            "Muzzle Brake"
+          ],
+          "grip": []
+        },
+        "tdm": true
       }
     ],
     "gadgets": [
@@ -5273,6 +5293,26 @@
       {
         "name": "P12",
         "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2mpM7rah7rwEW0bViIirUC/ed9caa4db58421519fa4db390b1aa164/P12.png",
+        "attachment_options": {
+          "sight": false,
+          "muzzle": true,
+          "grip": false,
+          "laser": true
+        },
+        "attachments": {
+          "sight": 0,
+          "muzzle": [
+            "None",
+            "Suppressor",
+            "Muzzle Brake"
+          ],
+          "grip": []
+        },
+        "tdm": true
+      },
+      {
+        "name": "KERATOS .357",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/15caVAsSCr8Rsb5Hid36uc/59632c4f90727931041ced62a620018b/Keratos_.357.png",
         "attachment_options": {
           "sight": false,
           "muzzle": true,
@@ -7675,8 +7715,8 @@
         "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2TsFLmb2O6LRZpbxzkZDck/c9146913388a9567500b704c95600621/Proximity_alarm.png"
       },
       {
-        "name": "Bulletproof Camera",
-        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/gZuOXvuTu2i8hQX0B6auy/259f379a6283bae618443d722a896f1a/Bulletproof_camera.png"
+        "name": "Impact Grenades",
+        "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iJK9B1Vr3PDO3rGftU00l/3a02e940b440c30929edf22c49870f65/impact-grenade__1_.png"
       }
     ],
     "tdm": true
