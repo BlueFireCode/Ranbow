@@ -394,28 +394,6 @@
           "grip": []
         },
         "tdm": true
-      },
-      {
-        "name": "Reaper MK2",
-        "icon_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5RC060K72yG2OXMq43lgrv/83df616f6d4a2dde6293cc97449159eb/reaper-mk2.png",
-        "attachment_options": {
-          "sight": false,
-          "muzzle": true,
-          "grip": false,
-          "laser": true
-        },
-        "attachments": {
-          "sight": 0,
-          "muzzle": [
-            "None",
-            "Flash Hider",
-            "Compensator",
-            "Muzzle Brake",
-            "Suppressor"
-          ],
-          "grip": []
-        },
-        "tdm": true
       }
     ],
     "gadgets": [
