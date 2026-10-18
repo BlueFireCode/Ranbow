@@ -8831,6 +8831,7 @@
         "name": "Barbed Wire",
         "icon_url": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7igaibxuCcSpWDkZensEJS/6d30514b70a4c8b535bb1c113f9cfce0/barbed-wire__1_.png"
       }
-    ]
+    ],
+    "tdm": true
   }
 ]
